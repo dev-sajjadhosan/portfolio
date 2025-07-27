@@ -17,3 +17,7 @@
 .museo {
   font-family: 'MuseoModerno', sans-serif;
 }
+
+@utility btn {
+  @apply shadow-none;
+}

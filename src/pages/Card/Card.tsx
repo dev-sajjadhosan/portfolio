@@ -12,6 +12,7 @@ import {
 import image from '../../assets/image.png'
 // import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
+import { motion } from 'motion/react'
 
 const socialLinks = [
   {
@@ -51,7 +52,12 @@ const CardView = () => {
   return (
     <>
       <div className="flex justify-center items-center h-screen text-primary">
-        <div className="p-7 flex flex-col gap-1.5 w-md bg-base-300 rounded-3xl">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0, duration: 0.9, type: 'spring' }}
+          className="p-7 flex flex-col gap-1.5 w-md bg-base-300 rounded-3xl"
+        >
           <div className="flex items-center justify-end gap-1">
             {/* <button
               className="btn btn-sm btn-soft btn-success tooltip tooltip-bottom"
@@ -59,58 +65,106 @@ const CardView = () => {
             >
               <TbUserShare size={17} />
             </button> */}
-            <button
+            <motion.button
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
               className="btn btn-sm btn-soft btn-success tooltip tooltip-bottom"
               data-tip="Change Color"
             >
               <TbBackground size={17} />
-            </button>
+            </motion.button>
           </div>
-          <div className="avatar w-52 h-52 bg-none border-2 rounded-full mx-auto mt-1 mb-5">
-            <img src={image} alt="" className="w-full h-full object-contain" />
+          <div className="avatar w-52 bg-none mx-auto mt-1 mb-5">
+            <motion.img
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              src={image}
+              alt=""
+              className="w-full h-full object-contain"
+            />
           </div>
           <div className="flex flex-col gap-1 items-center">
-            <h1 className="text-3xl">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.7 }}
+              className="text-3xl"
+            >
               <span className="font-light">Mohammad</span> Sajjad Hosan
-            </h1>
-            <h3 className="font-light text-sm w-[85%] text-center">
+            </motion.h1>
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.7 }}
+              className="font-light text-sm w-[85%] text-center"
+            >
               Full-Stack Developer | React, Node.js, MongoDB | MERN Stack |
               Remote Ready
-            </h3>
+            </motion.h3>
             <div className="mt-5 flex items-center gap-5">
-              <Link
-                to="/home"
-                className="btn btn-primary btn-ghost shadow-none"
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.3, duration: 0.7 }}
               >
-                View Portfolio
-                <TbChevronUpRight size={17} />
-              </Link>
-              <Link
-                to="/projects"
-                className="btn btn-sm btn-primary shadow-none"
+                <Link
+                  to="/home"
+                  className="btn btn-primary btn-ghost"
+                >
+                  View Portfolio
+                  <TbChevronUpRight size={17} />
+                </Link>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.5, duration: 0.7 }}
               >
-                View Projects
-                <TbLayout2 size={17} />
-              </Link>
+                <Link
+                  to="/projects"
+                  className="btn btn-primary"
+                >
+                  View Projects
+                  <TbLayout2 size={17} />
+                </Link>
+              </motion.div>
             </div>
           </div>
           <div className="mt-3 flex flex-col gap-1.5">
-            <h3 className="text-md font-light text-gray-400">
+            <motion.h3
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.6, duration: 0.7 }}
+              className="text-md font-light text-gray-400"
+            >
               Connect with me
-            </h3>
-            <div className="flex items-center justify-center gap-2.5">
+            </motion.h3>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1.7, duration: 0.7 }}
+              className="flex items-center justify-center gap-2.5"
+            >
               {socialLinks.map((s, i) => (
-                <button
+                <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 * i, duration: 0.7 }}
                   key={i}
                   title={s.title}
                   className="btn btn-sm btn-soft btn-success tooltip"
                   data-tip={s.tooltip}
                 >
                   {s.icon}
-                </button>
+                </motion.button>
               ))}
 
-              <button
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 2.1, duration: 0.9 }}
                 className="btn btn-sm btn-accent"
                 onClick={() =>
                   (
@@ -119,10 +173,10 @@ const CardView = () => {
                 }
               >
                 <TbSocial size={17} />
-              </button>
-            </div>
+              </motion.button>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </>
   )

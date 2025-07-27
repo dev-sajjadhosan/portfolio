@@ -3,6 +3,7 @@ import {
   TbBrandGithub,
   TbBrandLinkedin,
   TbBrandMeta,
+  TbCopyCheck,
   TbMailPin,
 } from 'react-icons/tb'
 
@@ -44,12 +45,12 @@ const ShareModal = () => {
   return (
     <dialog className="modal" id="share_modal">
       <div className="modal-box max-w-2xl w-11/12">
-      <div className="flex justify-between items-center">
-        <h3 className="font-medium text-md mb-2">Share Portfolio</h3>
-<form method="dialog">
-    <button className="btn btn-sm btn-soft btn-error">Close</button>
-</form>
-      </div>
+        <div className="flex justify-between items-center">
+          <h3 className="font-medium text-md mb-2">Share Portfolio</h3>
+          <form method="dialog">
+            <button className="btn btn-sm btn-soft btn-error">Close</button>
+          </form>
+        </div>
         <div className="flex items-center mx-auto bg-base-300 rounded-lg py-3 px-3 w-3/4">
           <input
             type="text"
@@ -57,7 +58,10 @@ const ShareModal = () => {
             placeholder="https://mohammadsajjadhosan.vercel.app"
             readOnly
           />
-          <button className="btn btn-sm btn-soft btn-info">Copy</button>
+          <button className="btn btn-sm btn-soft btn-info">
+            <TbCopyCheck size={15} />
+            Copy
+          </button>
         </div>
         <p className="text-sm text-gray-500 mt-2">
           Share portfolio link with others

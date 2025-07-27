@@ -1,9 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import useAuth from '../../hooks/useAuth'
+import { motion } from 'motion/react'
 
 const formatTime = (value: number): string => {
   return value < 10 ? `0${value}` : `${value}`
 }
+
+const colors = [
+  '#3B82F6',
+  '#F97316',
+  '#22C55E',
+  '#EF4444',
+  '#8B5CF6',
+  '#F4F4F5',
+]
 
 const Clock: React.FC = () => {
   const { setPeriod } = useAuth()
@@ -37,11 +47,24 @@ const Clock: React.FC = () => {
 
   return (
     <div>
-      <h2 className="text-xl flex items-center gap-1 text-white">
-        <span className="">{formatTime(time.hours)}</span>:
-        <span className="">{formatTime(time.minutes)}</span>:
-        <span className="">{formatTime(time.seconds)}</span>
-      </h2>
+      <motion.h2
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.7, duration: 0.4 }}
+        className="text-xl flex items-center gap-1"
+      >
+        <span style={{ color: colors[time.seconds % colors.length] }}>
+          {formatTime(time.hours)}
+        </span>
+        :
+        <span style={{ color: colors[(time.seconds % colors.length) + 1] }}>
+          {formatTime(time.minutes)}
+        </span>
+        :
+        <span style={{ color: colors[(time.seconds % colors.length) + 2] }}>
+          {formatTime(time.seconds)}
+        </span>
+      </motion.h2>
     </div>
   )
 }
