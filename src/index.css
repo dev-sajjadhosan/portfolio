@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Karla:ital,wght@0,200..800;1,200..800&family=MuseoModerno:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: all;
+}
+
+* {
+  font-family: 'Karla', sans-serif;
+}
+.karla {
+  font-family: 'Karla', sans-serif;
+}
+.josefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+.museo {
+  font-family: 'MuseoModerno', sans-serif;
+}
