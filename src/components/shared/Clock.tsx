@@ -51,7 +51,7 @@ const Clock: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.7, duration: 0.4 }}
-        className="text-xl flex items-center gap-1"
+        className="text-2xl md:text-xl flex items-center gap-1"
       >
         <span style={{ color: colors[time.seconds % colors.length] }}>
           {formatTime(time.hours)}

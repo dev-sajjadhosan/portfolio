@@ -5,18 +5,19 @@ import useAuth from '../../hooks/useAuth'
 import dev from '../../assets/image.png'
 import { TbDeviceDesktop, TbLayout2, TbScanEye } from 'react-icons/tb'
 import { motion } from 'motion/react'
+import TypingAnimation from '../../components/Share/TypingAnimation'
 
 const HomePage = () => {
   const { period } = useAuth()
   return (
     <>
-      <div className="p-5 flex flex-col justify-between h-screen relative z-20">
+      <div className="p-5 flex flex-col justify-between h-[96.5vh] md:h-screen relative z-20">
         <Header />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0, duration: 0.9, type: 'spring' }}
-          className="fixed top-1/2 left-1/2 -translate-1/2 text-[21rem] md:text-[30rem] museo text-[#1F1F1F] -z-10"
+          className="fixed top-1/2 left-1/2 -translate-1/2 text-[19rem] md:text-[30rem] museo text-[#1F1F1F] -z-10"
         >
           {period}
         </motion.div>
@@ -26,23 +27,15 @@ const HomePage = () => {
         >
           <div className="flex flex-col gap-1.5">
             <Socials />
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.4 }}
-              className="text-3xl mt-3"
-            >
-              Mohammad{' '}
-              <span className="text-error font-semibold">Sajjad Hosan</span>
-            </motion.h1>
+            <TypingAnimation />
             <motion.h3
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.3, duration: 0.4 }}
-              className="text-md font-light text-[#969696]"
+              className="text-lg md:text-md font-light text-[#d1d1d1] w-11/12 md:w-full"
             >
               Full-Stack Developer | React, Node.js, MongoDB | MERN Stack |
-              Remote Ready
+              <span className="font-semibold text-primary"> Remote Ready</span>
             </motion.h3>
             <div>
               <motion.p

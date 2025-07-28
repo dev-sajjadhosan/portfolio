@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { TbUser } from 'react-icons/tb'
+import { TbUser, TbUserCode } from 'react-icons/tb'
 import { Link, useLocation } from 'react-router-dom'
 
 const menuItems = [
@@ -100,7 +100,7 @@ const Header = () => {
 
       {/* 3️⃣ Contact Button */}
       <motion.div
-        className="hidden md:flex navbar-end"
+        className="hidden md:flex gap-2 navbar-end"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 2.7, duration: 0.4 }}
@@ -111,9 +111,16 @@ const Header = () => {
             Contact
           </motion.button>
         </Link>
+        <Link to="/collaboration">
+          <motion.button className="btn btn-sm btn-primary btn-soft flex items-center gap-1">
+            <TbUserCode size={17} />
+            Collaborate
+          </motion.button>
+        </Link>
       </motion.div>
+
       <motion.div
-        className="lg:hidden navbar-end"
+        className="lg:hidden flex gap-2 navbar-end"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.9, duration: 0.4 }}
@@ -122,6 +129,12 @@ const Header = () => {
           <motion.button className="btn btn-sm btn-primary flex items-center gap-1">
             <TbUser size={17} />
             Contact
+          </motion.button>
+        </Link>
+        <Link to="/collaboration">
+          <motion.button className="btn btn-sm btn-primary btn-soft flex items-center gap-1">
+            <TbUserCode size={17} />
+            Collaborate
           </motion.button>
         </Link>
       </motion.div>

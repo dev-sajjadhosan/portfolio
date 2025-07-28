@@ -3,6 +3,7 @@ import HomePage from '../../pages/Home/Home'
 import CardView from '../../pages/Card/Card'
 import ShareModal from '../../components/Share/Share'
 import AuthProvider from '../../context/AuthProvider'
+import NotFound from '../../pages/NotFound/NotFound'
 
 const RootLay = () => {
   return (
@@ -15,6 +16,8 @@ const RootLay = () => {
             <Routes>
               <Route path="/" element={<CardView />} />
               <Route path="/home" element={<HomePage />} />
+
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
         </div>
