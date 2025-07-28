@@ -13,6 +13,7 @@ import image from '../../assets/image.png'
 // import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
+import ShareModal from '../../components/Share/Share'
 
 const socialLinks = [
   {
@@ -51,6 +52,11 @@ const socialLinks = [
 const CardView = () => {
   return (
     <>
+      <ShareModal
+        title={'portfolio'}
+        url="https://mohammadsajjadhosan.vercel.app"
+      />
+
       <div className="flex justify-center items-center h-screen text-primary">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -109,10 +115,7 @@ const CardView = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <Link
-                  to="/home"
-                  className="btn btn-primary btn-ghost"
-                >
+                <Link to="/home" className="btn btn-primary btn-ghost">
                   View Portfolio
                   <TbChevronUpRight size={17} />
                 </Link>
@@ -122,10 +125,7 @@ const CardView = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.5, duration: 0.7 }}
               >
-                <Link
-                  to="/projects"
-                  className="btn btn-primary"
-                >
+                <Link to="/projects" className="btn btn-primary">
                   View Projects
                   <TbLayout2 size={17} />
                 </Link>

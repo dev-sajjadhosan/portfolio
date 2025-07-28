@@ -39,7 +39,7 @@ const Filters = () => {
         >
           Filter Your Flavor
         </motion.h3>
-        <motion.div className="flex flex-wrap items-center justify-center gap-1 md:gap-3 mt-2.5 md:w-3/5 mx-auto">
+        <motion.div className="flex flex-wrap items-center justify-center gap-1 md:gap-3 mt-2.5 lg:w-3/5 mx-auto">
           {skills.map((tl, i) => (
             <motion.div
               onClick={() => handleFilter(tl)}

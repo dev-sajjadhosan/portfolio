@@ -1,20 +1,21 @@
 import { LuListFilter } from 'react-icons/lu'
-import { TbHash, TbUserCode } from 'react-icons/tb'
+import { TbUserCode } from 'react-icons/tb'
 import BackBtn from '../../components/shared/BackBtn'
 import ProjectView from '../../components/ProjectView/ProjectView'
-import Filters from '../../components/Share/Filters'
+import Filters from '../../components/shared/Filters'
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'motion/react'
 import useAuth from '../../hooks/useAuth'
 import { Link } from 'react-router-dom'
+import CustomizeDropdown from '../../components/shared/Customization/Customization'
 
 const ProjectsPage = () => {
-  const { filter } = useAuth()
+  const { filter, isView, isLayout } = useAuth()
   const [isFilter, setIsFilter] = useState(true)
 
   return (
     <>
-      <div className="flex flex-col justify-between items-center bg-[#09090b] p-7 text-primary">
+      <div className="flex flex-col justify-between items-center bg-[#09090b] p-5 text-primary">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -23,15 +24,7 @@ const ProjectsPage = () => {
         >
           <BackBtn type="default" />
           <div className="flex items-center gap-3.5">
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.7 }}
-              className="btn btn-sm btn-primary btn-soft"
-            >
-              <TbHash size={17} />
-              Customization
-            </motion.button>
+            <CustomizeDropdown />
             <motion.button
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +41,7 @@ const ProjectsPage = () => {
         </motion.div>
         <div className="mt-7 flex flex-col gap-3 w-full">
           {isFilter && (
-            <div className="w-full">
+            <div>
               <Filters />
             </div>
           )}
@@ -58,7 +51,7 @@ const ProjectsPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7, duration: 0.7 }}
             exit={{ opacity: 0, y: -20 }}
-            className="w-full p-5"
+            className="w-full"
           >
             <motion.div
               initial={{ opacity: 0, y: -20 }}
@@ -87,7 +80,21 @@ const ProjectsPage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 40 }}
                 transition={{ duration: 0.4 }}
-                className="flex flex-col gap-19"
+                className={` ${
+                  isView === 1
+                    ? 'grid grid-cols-1'
+                    : isView === 2
+                    ? 'grid grid-cols-2'
+                    : 'flex'
+                } 
+                ${
+                  isLayout === 'row'
+                    ? 'flex flex-row flex-wrap gap-5'
+                    : isLayout === 'column'
+                    ? 'flex flex-col gap-15'
+                    : 'flex flex-wrap gap-5'
+                }
+                `}
               >
                 {[...Array(5).keys()].map((i) => (
                   <ProjectView key={i} isFill={filter} />

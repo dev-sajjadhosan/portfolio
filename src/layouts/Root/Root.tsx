@@ -1,18 +1,12 @@
 import { useEffect, useState } from 'react'
-import {
-  BrowserRouter,
-  Route,
-  Routes,
-  useLocation,
-  useNavigationType,
-} from 'react-router-dom'
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import HomePage from '../../pages/Home/Home'
 import CardView from '../../pages/Card/Card'
-import ShareModal from '../../components/Share/Share'
 import AuthProvider from '../../context/AuthProvider'
 import NotFound from '../../pages/NotFound/NotFound'
 import ProjectsPage from '../../pages/Projects/Projects'
 import LoadingPage from '../../pages/Loading/Loading'
+import Feedback from '../../components/shared/Feedback'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -33,6 +27,7 @@ const RouteLoaderWrapper = () => {
       <Route path="/" element={<CardView />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/projects" element={<ProjectsPage />} />
+
       <Route path="*" element={<NotFound />} />
     </Routes>
   )
@@ -42,7 +37,8 @@ const RootLay = () => {
   return (
     <AuthProvider>
       <div data-theme="luxury">
-        <ShareModal />
+        <Feedback />
+
         <BrowserRouter>
           <RouteLoaderWrapper />
         </BrowserRouter>

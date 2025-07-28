@@ -41,30 +41,36 @@ const socialLinks = [
   },
 ]
 
-const ShareModal = () => {
+const ShareModal = ({
+  title,
+  url,
+}: {
+  title: string | undefined
+  url: string | undefined
+}) => {
   return (
     <dialog className="modal" id="share_modal">
-      <div className="modal-box max-w-2xl w-11/12">
+      <div className="modal-box max-w-2xl w-11/12 shadow shadow-accent">
         <div className="flex justify-between items-center">
-          <h3 className="font-medium text-md mb-2">Share Portfolio</h3>
+          <h3 className="font-medium text-md mb-2 capitalize">Share <span className="museo font-light italic">{title}</span></h3>
           <form method="dialog">
-            <button className="btn btn-sm btn-soft btn-error">Close</button>
+            <button className="btn btn-sm btn-soft btn-error px-5">Close</button>
           </form>
         </div>
-        <div className="flex items-center mx-auto bg-base-300 rounded-lg py-3 px-3 w-3/4">
+        <div className="flex items-center mx-auto bg-base-200 rounded-lg py-2 px-2.5 w-3/4 my-3">
           <input
             type="text"
-            className="border-0 outline-0 text-sm px-1.5 w-full"
-            placeholder="https://mohammadsajjadhosan.vercel.app"
+            className="border-0 outline-0 text-sm px-1.5 w-full text-ellipsis"
+            defaultValue={url}
             readOnly
           />
-          <button className="btn btn-sm btn-soft btn-info">
+          <button className="btn btn-sm btn-soft btn-primary">
             <TbCopyCheck size={15} />
             Copy
           </button>
         </div>
-        <p className="text-sm text-gray-500 mt-2">
-          Share portfolio link with others
+        <p className="text-sm text-gray-300 mt-3">
+          Share {title} link with others
         </p>
         <div className="flex items-center flex-wrap justify-center gap-3 mt-3.5">
           {socialLinks.map((link, index) => (
@@ -73,7 +79,7 @@ const ShareModal = () => {
               href={link.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-sm btn-soft btn-accent"
+              className="btn btn-sm btn-soft btn-info"
             >
               {link.icon}
               <span className="ml-2">{link.title}</span>

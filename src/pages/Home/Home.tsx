@@ -1,11 +1,11 @@
 import Header from '../../components/Header/Header'
-import Socials from '../../components/Share/Socials'
+import Socials from '../../components/shared/Socials'
 import Clock from '../../components/shared/Clock'
 import useAuth from '../../hooks/useAuth'
 import dev from '../../assets/image.png'
 import { TbDeviceDesktop, TbLayout2, TbScanEye } from 'react-icons/tb'
 import { motion } from 'motion/react'
-import TypingAnimation from '../../components/Share/TypingAnimation'
+import TypingAnimation from '../../components/shared/TypingAnimation'
 
 const HomePage = () => {
   const { period } = useAuth()
