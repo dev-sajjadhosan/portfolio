@@ -57,8 +57,8 @@ const Header = () => {
               <Link to={li.path} key={i}>
                 <motion.li
                   initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.7 * i, duration: 0.4 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 * i, duration: 0.4 }}
                   className="px-3 py-1"
                 >
                   {li.label}

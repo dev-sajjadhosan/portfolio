@@ -20,4 +20,5 @@
 
 @utility btn {
   @apply shadow-none;
+  @apply border-0;
 }

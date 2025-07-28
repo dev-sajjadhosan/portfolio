@@ -1,28 +1,53 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { useEffect, useState } from 'react'
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  useNavigationType,
+} from 'react-router-dom'
 import HomePage from '../../pages/Home/Home'
 import CardView from '../../pages/Card/Card'
 import ShareModal from '../../components/Share/Share'
 import AuthProvider from '../../context/AuthProvider'
 import NotFound from '../../pages/NotFound/NotFound'
+import ProjectsPage from '../../pages/Projects/Projects'
+import LoadingPage from '../../pages/Loading/Loading'
+
+const RouteLoaderWrapper = () => {
+  const location = useLocation()
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setLoading(true)
+    const timer = setTimeout(() => {
+      setLoading(false)
+    }, 1200) // loader time on each route change
+    return () => clearTimeout(timer)
+  }, [location.pathname]) // trigger when route changes
+
+  return loading ? (
+    <LoadingPage />
+  ) : (
+    <Routes>
+      <Route path="/" element={<CardView />} />
+      <Route path="/home" element={<HomePage />} />
+      <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  )
+}
 
 const RootLay = () => {
   return (
-    <>
-      <AuthProvider>
-        <div data-theme="luxury">
-          <ShareModal />
-          {/*  */}
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<CardView />} />
-              <Route path="/home" element={<HomePage />} />
-
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        </div>
-      </AuthProvider>
-    </>
+    <AuthProvider>
+      <div data-theme="luxury">
+        <ShareModal />
+        <BrowserRouter>
+          <RouteLoaderWrapper />
+        </BrowserRouter>
+      </div>
+    </AuthProvider>
   )
 }
 export default RootLay
