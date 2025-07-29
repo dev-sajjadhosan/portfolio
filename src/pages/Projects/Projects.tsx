@@ -1,13 +1,13 @@
+import { AnimatePresence, motion } from 'motion/react'
+import { useState } from 'react'
 import { LuListFilter } from 'react-icons/lu'
 import { TbUserCode } from 'react-icons/tb'
-import BackBtn from '../../components/shared/BackBtn'
-import ProjectView from '../../components/ProjectView/ProjectView'
-import Filters from '../../components/shared/Filters'
-import { useState } from 'react'
-import { AnimatePresence, motion } from 'motion/react'
-import useAuth from '../../hooks/useAuth'
 import { Link } from 'react-router-dom'
-import CustomizeDropdown from '../../components/shared/Customization/Customization'
+import CustomizeDropdown from '../../components/Customization/Customization'
+import ProjectView from '../../components/ProjectView/ProjectView'
+import BackBtn from '../../components/shared/BackBtn'
+import Filters from '../../components/shared/Filters'
+import useAuth from '../../hooks/useAuth'
 
 const ProjectsPage = () => {
   const { filter, isView, isLayout } = useAuth()

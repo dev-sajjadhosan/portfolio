@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { TbHash } from 'react-icons/tb'
-import useAuth from '../../../hooks/useAuth'
+import useAuth from '../../hooks/useAuth'
 
 const CustomizeDropdown = () => {
   const { isCard, isLayout, isView, setIsCard, setIsLayout, setIsView } =

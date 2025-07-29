@@ -7,6 +7,7 @@ import NotFound from '../../pages/NotFound/NotFound'
 import ProjectsPage from '../../pages/Projects/Projects'
 import LoadingPage from '../../pages/Loading/Loading'
 import Feedback from '../../components/shared/Feedback'
+import ProjectDetails from '../../pages/ProjectDetails/ProjectDetails'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -27,6 +28,7 @@ const RouteLoaderWrapper = () => {
       <Route path="/" element={<CardView />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/projects" element={<ProjectsPage />} />
+      <Route path="/view/:title" element={<ProjectDetails />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

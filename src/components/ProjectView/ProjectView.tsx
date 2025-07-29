@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion'
-import { TbBellShare, TbClick, TbLocationShare } from 'react-icons/tb'
+import { TbBellShare, TbClick, TbExternalLink, TbLocationShare, TbTextCaption } from 'react-icons/tb'
 import image from '../../assets/project.jpg'
 import { VscRepo } from 'react-icons/vsc'
 import ShareModal from '../Share/Share'
 import useAuth from '../../hooks/useAuth'
+import { Link } from 'react-router-dom'
 
 const ProjectView = ({ isFill }: { isFill: string }) => {
   const { isCard, isLayout, isView } = useAuth()
@@ -118,13 +119,15 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
                 View Repo
               </motion.button>
               <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
-                <VscRepo size={17} />
+                <TbExternalLink size={17} />
                 View Live
               </motion.button>
+              <Link to='/view/ai-image-generated'>
               <motion.button className="btn btn-primary btn-sm lg:btn-md">
-                <VscRepo size={17} />
+                <TbTextCaption size={17} />
                 View Information
               </motion.button>
+              </Link>
             </div>
 
             <div className="flex flex-col gap-1">

@@ -6,11 +6,15 @@ import dev from '../../assets/image.png'
 import { TbDeviceDesktop, TbLayout2, TbScanEye } from 'react-icons/tb'
 import { motion } from 'motion/react'
 import TypingAnimation from '../../components/shared/TypingAnimation'
+import { Link } from 'react-router-dom'
+import ResumeView from '../../components/ResumeView/ResumeView'
 
 const HomePage = () => {
   const { period } = useAuth()
   return (
     <>
+      <ResumeView />
+
       <div className="p-5 flex flex-col justify-between h-[96.5vh] md:h-screen relative z-20">
         <Header />
         <motion.div
@@ -76,19 +80,27 @@ const HomePage = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 2.1, duration: 0.4 }}
                 className="btn btn-sm btn-primary btn-soft px-3"
+                onClick={() => {
+                  const modal = document.getElementById(
+                    'resume_modal',
+                  ) as HTMLDialogElement
+                  modal?.showModal()
+                }}
               >
                 <TbScanEye size={17} />
                 View Resume
               </motion.button>
-              <motion.button
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 2.3, duration: 0.4 }}
-                className="btn btn-sm btn-primary px-3"
-              >
-                <TbLayout2 size={17} />
-                View Projects
-              </motion.button>
+              <Link to="/projects">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 2.3, duration: 0.4 }}
+                  className="btn btn-sm btn-primary px-3"
+                >
+                  <TbLayout2 size={17} />
+                  View Projects
+                </motion.div>
+              </Link>
             </motion.div>
           </div>
           <div>
