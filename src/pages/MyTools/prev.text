@@ -1,0 +1,24 @@
+<div className="card mt-5">
+                {myTools.map((item, i) => (
+                  <div key={i} className="my-2.5">
+                    <h3 className="text-xl capitalize">{item?.title}</h3>
+                    <div className="mt-2 flex flex-wrap items-center gap-3">
+                      {item?.tools?.map((i) => (
+                        <Link to={i?.url} target="_blank">
+                          <div
+                            key={i?.id}
+                            className="flex gap-1 capitalize rounded-md items-center justify-center px-3 text-sm bg-base-300 cursor-pointer transition-all duration-100 hover:scale-105"
+                          >
+                            <img
+                              src={i?.img}
+                              alt={i?.title}
+                              className="w-9 h-9 object-contain"
+                            />
+                            {i?.title}
+                          </div>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>

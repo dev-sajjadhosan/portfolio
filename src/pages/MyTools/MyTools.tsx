@@ -33,7 +33,8 @@ import {
   socketio,
   typescript,
 } from '../../assets/tools/tools'
-import { Link, useNavigate } from 'react-router-dom'
+import { useState } from 'react'
+import ToolCard from '../../components/shared/ToolCard'
 
 const myTools = [
   {
@@ -63,12 +64,14 @@ const myTools = [
         title: 'react query',
         img: reactquery,
         url: 'https://tanstack.com/query/latest',
+        size: 100,
       },
       {
         id: 5,
         title: 'react hook form',
         img: reactForm,
         url: 'https://react-hook-form.com/',
+        size: 100,
       },
       {
         id: 6,
@@ -82,6 +85,7 @@ const myTools = [
         title: 'google fonts',
         img: googleFont,
         url: 'https://fonts.google.com/',
+        size: 100,
       },
       {
         id: 9,
@@ -89,11 +93,17 @@ const myTools = [
         img: tailwindcss,
         url: 'https://tailwindcss.com/',
       },
-      { id: 10, title: 'daisyui', img: daisyui, url: 'https://daisyui.com/' },
+      {
+        id: 10,
+        title: 'daisyui',
+        img: daisyui,
+        url: 'https://daisyui.com/',
+        size: 100,
+      },
     ],
   },
   {
-    title: 'os / mobile application',
+    title: 'application',
     tools: [
       {
         id: 0,
@@ -119,7 +129,13 @@ const myTools = [
         img: typescript,
         url: 'https://www.typescriptlang.org/',
       },
-      { id: 3, title: 'jsonwebtoken', img: jwt, url: 'https://jwt.io/' },
+      {
+        id: 3,
+        title: 'jsonwebtoken',
+        img: jwt,
+        url: 'https://jwt.io/',
+        size: 100,
+      },
       {
         id: 4,
         title: 'nodemon',
@@ -162,7 +178,7 @@ const myTools = [
     ],
   },
   {
-    title: 'others tech and tools',
+    title: 'others',
     tools: [
       {
         id: 0,
@@ -184,49 +200,97 @@ const myTools = [
   },
 ]
 
+const future = [
+  {
+    id: 0,
+    title: 'NextJs',
+    category: 'frontend',
+    img: '',
+  },
+  {
+    id: 0,
+    title: 'NextJs',
+    category: 'frontend',
+    img: '',
+  },
+  {
+    id: 0,
+    title: 'NextJs',
+    category: 'frontend',
+    img: '',
+  },
+  {
+    id: 1,
+    title: 'python',
+    category: 'backend',
+    img: '',
+  },
+  {
+    id: 3,
+    title: 'goLang',
+    category: 'backend',
+    img: '',
+  },
+  {
+    id: 3,
+    title: 'rust',
+    category: 'backend',
+    img: '',
+  },
+]
+
 const MyToolsPage = () => {
-  const nav = useNavigate()
+  const [tab, seTab] = useState(true)
   return (
     <>
       <div className="h-full p-7">
         <div className="flex items-center justify-between">
-          <BackBtn />
+          <div className="flex items-center gap-1.5">
+            <BackBtn />
+          </div>
           <div className="flex items-center gap-3">
-            <button className="btn btn-sm btn-primary btn-soft">
+            <button
+              className={`btn btn-sm btn-primary  ${
+                tab === false ? 'btn-soft' : ''
+              }`}
+              onClick={() => seTab(!tab)}
+            >
               <LuAward size={17} />
               Current
             </button>
-            <button className="btn btn-sm btn-primary btn-soft">
+            <button
+              className={`btn btn-sm btn-primary  ${
+                tab === true ? 'btn-soft' : ''
+              }`}
+              onClick={() => seTab(!tab)}
+            >
               <LuCookingPot size={17} />
               Cooking
             </button>
           </div>
         </div>
-        <div className="mt-7 max-w-4xl mx-auto text-primary">
-          <div className="card">
-            {myTools.map((item, i) => (
-              <div key={i} className="my-2.5">
-                <h3 className="text-2xl capitalize">{item?.title}</h3>
-                <div className="mt-2 flex flex-wrap items-center gap-3">
-                  {item?.tools?.map((i) => (
-                    <Link to={i?.url} target="_blank">
-                      <div
-                        key={i?.id}
-                        className="card items-center justify-center p-3 bg-base-300 cursor-pointer transition-all duration-100 hover:scale-105"
-                      >
-                        <img
-                          src={i?.img}
-                          alt={i?.title}
-                          className="w-9 h-9 object-contain"
-                        />
-                        {i?.title}
-                      </div>
-                    </Link>
-                  ))}
-                </div>
+        <div className="mt-3 w-full text-primary">
+          {tab ? (
+            <div>
+              <h3 className="text-sm md:text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+                Sometimes the biggest bugs come from the tiniest mistakes — and
+                that’s just dev life. Laugh it off, learn, and keep coding. 😉
+              </h3>
+              <div>
+                <ToolCard data={myTools} />
               </div>
-            ))}
-          </div>
+            </div>
+          ) : (
+            <div>
+              <h3 className="text-sm md:text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+                Still burning rice, but also burning with passion. Learning the
+                art of cooking—one overcooked egg at a time. 🍳
+              </h3>
+              <div>
+                <ToolCard data={myTools} type='cook' />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </>

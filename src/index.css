@@ -7,6 +7,11 @@
 
 body {
   font-family: 'Karla', sans-serif;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
 .karla {
   font-family: 'Karla', sans-serif;
@@ -21,4 +26,5 @@ body {
 @utility btn {
   @apply shadow-none;
   @apply border-0;
+  @apply font-normal;
 }
