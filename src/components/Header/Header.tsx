@@ -1,13 +1,22 @@
 import { motion } from 'framer-motion'
-import { TbUser, TbUserCode } from 'react-icons/tb'
+import {
+  TbBurger,
+  TbHome,
+  TbLayout2,
+  TbPhone,
+  TbTemplate,
+  TbUser,
+  TbUserCode,
+} from 'react-icons/tb'
+import { VscTools } from 'react-icons/vsc'
 import { Link, useLocation } from 'react-router-dom'
 
 const menuItems = [
-  { label: 'home', path: '/home' },
-  { label: 'projects', path: '/projects' },
-  { label: 'tools', path: '/tools' },
-  { label: 'about me', path: '/about-me' },
-  { label: 'blogs', path: '/blogs' },
+  { label: 'home', path: '/home', icon: <TbHome size={15} /> },
+  { label: 'projects', path: '/projects', icon: <TbLayout2 size={15} /> },
+  { label: 'my tools', path: '/my-tools', icon: <VscTools size={15} /> },
+  { label: 'about dev', path: '/about-dev', icon: <TbUser size={15} /> },
+  { label: 'blogs', path: '/blogs', icon: <TbTemplate size={15} /> },
 ]
 
 const Header = () => {
@@ -32,38 +41,31 @@ const Header = () => {
           transition={{ delay: 0.2, duration: 0.4 }}
           className="dropdown"
         >
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              {' '}
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />{' '}
-            </svg>
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn btn-sm btn-primary btn-soft lg:hidden mr-1.5"
+          >
+            <TbBurger size={21} />
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-5"
+            className="menu menu-sm dropdown-content bg-base-300 gap-1.5 rounded-box z-10 mt-3 w-xs p-5 text-primary"
           >
             {menuItems.map((li, i) => (
-              <Link to={li.path} key={i}>
-                <motion.li
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 * i, duration: 0.4 }}
-                  className="px-3 py-1"
-                >
-                  {li.label}
-                </motion.li>
-              </Link>
+              <motion.li
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5 * i, duration: 0.4 }}
+                className={`   rounded-md ${
+                  li.path === pathname ? 'bg-primary text-black' : ''
+                }`}
+              >
+                <Link to={li.path} key={i}>
+                  {li.icon}
+                  <a>{li.label}</a>
+                </Link>
+              </motion.li>
             ))}
           </ul>
         </motion.div>
@@ -80,20 +82,21 @@ const Header = () => {
       >
         <ul className="menu menu-horizontal gap-1.5 px-1 capitalize">
           {menuItems.map((li, i) => (
-            <Link to={li.path} key={i}>
-              <motion.li
-                className={`  px-3.5 py-0.5 rounded ${
-                  li.path === pathname
-                    ? 'bg-white text-[#313131]'
-                    : 'bg-white/15 text-white'
-                }`}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 * i, duration: 0.4 }}
-              >
-                {li.label}
-              </motion.li>
-            </Link>
+            <motion.li
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 * i, duration: 0.4 }}
+              className={`   rounded-md ${
+                li.path === pathname
+                  ? 'bg-white text-[#313131]'
+                  : 'bg-white/15 text-white'
+              }`}
+            >
+              <Link to={li.path} key={i}>
+                {li.icon}
+                <a>{li.label}</a>
+              </Link>
+            </motion.li>
           ))}
         </ul>
       </motion.div>
@@ -107,7 +110,7 @@ const Header = () => {
       >
         <Link to="/contact">
           <motion.button className="btn btn-sm btn-primary flex items-center gap-1">
-            <TbUser size={17} />
+            <TbPhone size={17} />
             Contact
           </motion.button>
         </Link>

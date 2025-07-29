@@ -6,7 +6,7 @@ type BtnProps = {
   type?: 'ghost' | 'default' | 'outline'
 }
 
-const BackBtn = ({ type }: BtnProps) => {
+const BackBtn = ({ type = 'default' }: BtnProps) => {
   const nav = useNavigate()
   return (
     <>
