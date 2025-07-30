@@ -15,7 +15,7 @@ const HomePage = () => {
     <>
       <ResumeView />
 
-      <div className="p-5 flex flex-col justify-between h-[96.5vh] md:h-screen relative z-20">
+      <div className="p-5 flex flex-col justify-between min-h-[95.5vh] md:h-screen relative z-20">
         <Header />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -74,7 +74,7 @@ const HomePage = () => {
                 </motion.li>
               </ul>
             </div>
-            <motion.div className="mt-3 flex items-center gap-3">
+            <motion.div className="mt-5 flex items-center gap-3">
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -110,7 +110,7 @@ const HomePage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 2.8, duration: 0.4 }}
                 src={dev}
-                width={400}
+                width={250}
                 alt=""
               />
             </div>

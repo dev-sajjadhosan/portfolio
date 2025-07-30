@@ -200,44 +200,7 @@ const myTools = [
   },
 ]
 
-const future = [
-  {
-    id: 0,
-    title: 'NextJs',
-    category: 'frontend',
-    img: '',
-  },
-  {
-    id: 0,
-    title: 'NextJs',
-    category: 'frontend',
-    img: '',
-  },
-  {
-    id: 0,
-    title: 'NextJs',
-    category: 'frontend',
-    img: '',
-  },
-  {
-    id: 1,
-    title: 'python',
-    category: 'backend',
-    img: '',
-  },
-  {
-    id: 3,
-    title: 'goLang',
-    category: 'backend',
-    img: '',
-  },
-  {
-    id: 3,
-    title: 'rust',
-    category: 'backend',
-    img: '',
-  },
-]
+// mytool array for cooking part
 
 const MyToolsPage = () => {
   const [tab, seTab] = useState(true)
@@ -269,25 +232,25 @@ const MyToolsPage = () => {
             </button>
           </div>
         </div>
-        <div className="mt-3 w-full text-primary">
+        <div className="mt-9 w-full text-primary">
           {tab ? (
             <div>
-              <h3 className="text-sm md:text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+              <h3 className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
                 Sometimes the biggest bugs come from the tiniest mistakes — and
                 that’s just dev life. Laugh it off, learn, and keep coding. 😉
               </h3>
               <div>
-                <ToolCard data={myTools} />
+                <ToolCard data={myTools} type="default" />
               </div>
             </div>
           ) : (
             <div>
-              <h3 className="text-sm md:text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+              <h3 className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
                 Still burning rice, but also burning with passion. Learning the
                 art of cooking—one overcooked egg at a time. 🍳
               </h3>
               <div>
-                <ToolCard data={myTools} type='cook' />
+                <ToolCard data={myTools} type="cook" />
               </div>
             </div>
           )}

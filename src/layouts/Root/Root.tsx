@@ -9,6 +9,7 @@ import LoadingPage from '../../pages/Loading/Loading'
 import Feedback from '../../components/shared/Feedback'
 import ProjectDetails from '../../pages/ProjectDetails/ProjectDetails'
 import MyToolsPage from '../../pages/MyTools/MyTools'
+import AboutDev from '../../pages/About/About'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -31,6 +32,7 @@ const RouteLoaderWrapper = () => {
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/view/:title" element={<ProjectDetails />} />
       <Route path="/my-tools" element={<MyToolsPage />} />
+      <Route path="/about-dev" element={<AboutDev />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

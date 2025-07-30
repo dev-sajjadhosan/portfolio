@@ -32,7 +32,7 @@ const ToolCard = ({
     <>
       <FloatToolDropdown handleFilter={handleFilter} filter={filter} />
 
-      <div className="h-[83vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
+      <div className="h-[89vh] lg:h-[83vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
         <div className="flex flex-col gap-17 items-center py-20 md:h-[70vh] overflow-x-auto w-full">
           {data[index]?.tools?.map(
             (
@@ -68,7 +68,7 @@ const ToolCard = ({
                 <div className="mx-auto text-center">
                   <img
                     src={l?.img}
-                    alt=""
+                    alt={l?.title}
                     width={l?.size ?? 150}
                     className="mx-auto"
                   />
