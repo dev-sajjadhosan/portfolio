@@ -29,6 +29,7 @@ import postman from '../tools/postman.png'
 import reactForm from '../tools/react-hook-form.png'
 import socketio from '../tools/socketio.png'
 import typescript from '../tools/typescript.png'
+import trae from '../tools/trae.png'
 
 export {
   axios,
@@ -62,4 +63,5 @@ export {
   reactForm,
   socketio,
   typescript,
+  trae,
 }

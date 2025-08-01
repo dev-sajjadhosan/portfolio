@@ -26,5 +26,5 @@ body {
 @utility btn {
   @apply shadow-none;
   @apply border-0;
-  @apply font-normal;
+  @apply font-medium;
 }

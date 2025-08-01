@@ -15,7 +15,10 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <div className="flex flex-col justify-between items-center bg-[#09090b] p-5 text-primary">
+      <motion.div
+        layout
+        className="flex flex-col justify-between items-center bg-[#09090b] p-5 text-primary"
+      >
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -103,7 +106,7 @@ const ProjectsPage = () => {
             </AnimatePresence>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

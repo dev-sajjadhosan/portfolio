@@ -29,7 +29,7 @@ const Filters = () => {
 
   return (
     <>
-      <div className="p-5">
+      <div className="p-5 text-primary">
         <motion.h3
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -47,8 +47,8 @@ const Filters = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 * i, duration: 0.7 }}
               key={i}
-              className={`btn btn-sm tracking-wider capitalize font-normal ${
-                filter !== tl.name && 'btn-ghost'
+              className={`btn btn-sm btn-primary tracking-wider capitalize font-normal ${
+                filter !== tl.name && 'btn-soft'
               }`}
             >
               {tl.name}

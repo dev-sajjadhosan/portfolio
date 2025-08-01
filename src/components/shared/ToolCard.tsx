@@ -13,7 +13,7 @@ const ToolCard = ({
     title: string
     tools: {
       img: string
-      size?: number
+      size: number
       title: string
       url: string
       id: number
@@ -32,8 +32,14 @@ const ToolCard = ({
     <>
       <FloatToolDropdown handleFilter={handleFilter} filter={filter} />
 
-      <div className="h-[89vh] lg:h-[83vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
-        <div className="flex flex-col gap-17 items-center py-20 md:h-[70vh] overflow-x-auto w-full">
+      <div className="h-[89vh] lg:h-[77.3vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
+        <motion.div
+          key={index}
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
+          className="flex flex-col gap-17 items-center py-20 md:h-[70vh] overflow-x-auto w-full"
+        >
           {data[index]?.tools?.map(
             (
               l: { img: string; size?: number; title: string; url: string },
@@ -83,15 +89,27 @@ const ToolCard = ({
             ),
           )}
           <div className="min-h-[19rem]"></div>
-        </div>
+        </motion.div>
         <div className="w-xs hidden lg:flex flex-col">
-          <h3 className="flex items-center gap-1">
+          <motion.h3
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="flex items-center gap-1"
+          >
             <TbCategory2 size={19} />
             Tech Categories
-          </h3>
+          </motion.h3>
           <ul className="flex flex-col gap-1.5 w-full mt-3">
             {data.map((l, i) => (
-              <li
+              <motion.li
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{
+                  delay: 0.5 * i,
+                  duration: 0.7,
+                  ease: 'backInOut',
+                }}
                 onClick={() => handleFilter(l.title, i)}
                 className={`btn btn-sm justify-between btn-primary capitalize ${
                   filter === l?.title ? 'btn-soft' : 'btn-ghost'
@@ -101,7 +119,7 @@ const ToolCard = ({
                 <span className="badge badge-sm badge-info badge-soft">
                   {l?.tools?.length}
                 </span>
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

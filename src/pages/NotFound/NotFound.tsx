@@ -1,12 +1,16 @@
 import { Link } from 'react-router-dom'
 import error from '../../assets/error.json'
+import { motion } from 'motion/react'
 
 import Player from 'lottie-react'
 
 const NotFound = () => {
   return (
     <>
-      <div className="flex items-center justify-center flex-col gap-1 bg-[#09090b] text-white min-h-[95.5vh] lg:h-screen">
+      <motion.div
+        layout
+         className="flex items-center justify-center flex-col gap-1 bg-[#09090b] text-white min-h-[95.5vh] lg:h-screen"
+      >
         <Player
           autoplay={true}
           loop={true}
@@ -20,7 +24,7 @@ const NotFound = () => {
         <Link to="/home" className="btn btn-primary mt-3">
           Yeet Me Home
         </Link>
-      </div>
+      </motion.div>
     </>
   )
 }

@@ -9,7 +9,7 @@ import {
   TbMailPin,
   TbSocial,
 } from 'react-icons/tb'
-import image from '../../assets/image.png'
+import image from '../../assets/user.png'
 // import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
@@ -57,7 +57,7 @@ const CardView = () => {
         url="https://mohammadsajjadhosan.vercel.app"
       />
 
-      <div className="flex justify-center items-center h-screen text-primary">
+      <motion.div layout className="flex justify-center items-center h-screen text-primary">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ const CardView = () => {
               <TbBackground size={17} />
             </motion.button>
           </div>
-          <div className="avatar w-52 bg-none mx-auto mt-1 mb-5">
+          <div className="avatar w-56 bg-none mx-auto mt-1 mb-1">
             <motion.img
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -177,7 +177,7 @@ const CardView = () => {
             </motion.div>
           </div>
         </motion.div>
-      </div>
+      </motion.div>
     </>
   )
 }

@@ -4,6 +4,7 @@ import {
   axios,
   daisyui,
   figma,
+  trae,
   github,
   javascript,
   mongoose,
@@ -32,9 +33,10 @@ import {
   reactForm,
   socketio,
   typescript,
-} from '../../assets/tools/tools'
+} from '../../assets/tools/Tools'
 import { useState } from 'react'
 import ToolCard from '../../components/shared/ToolCard'
+import { motion } from 'motion/react'
 
 const myTools = [
   {
@@ -186,16 +188,23 @@ const myTools = [
         img: vsCode,
         url: 'https://code.visualstudio.com/',
       },
-      { id: 1, title: 'git', img: git, url: 'https://git-scm.com/' },
-      { id: 2, title: 'github', img: github, url: 'https://github.com/' },
-      { id: 3, title: 'figma', img: figma, url: 'https://www.figma.com/' },
       {
-        id: 4,
+        id: 1,
+        title: 'trae ide',
+        img: trae,
+        url: 'https://www.trae.ai/',
+        size: '100',
+      },
+      { id: 2, title: 'git', img: git, url: 'https://git-scm.com/' },
+      { id: 3, title: 'github', img: github, url: 'https://github.com/' },
+      { id: 4, title: 'figma', img: figma, url: 'https://www.figma.com/' },
+      {
+        id: 5,
         title: 'chrome',
         img: chrome,
         url: 'https://www.google.com/chrome/',
       },
-      { id: 5, title: 'notion', img: notion, url: 'https://www.notion.so/' },
+      { id: 6, title: 'notion', img: notion, url: 'https://www.notion.so/' },
     ],
   },
 ]
@@ -206,13 +215,21 @@ const MyToolsPage = () => {
   const [tab, seTab] = useState(true)
   return (
     <>
-      <div className="h-full p-7">
-        <div className="flex items-center justify-between">
+      <motion.div layout className="h-full p-7">
+        <motion.div
+          initial={{ y: -50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ type: 'spring', delay: 0.1, duration: 0.7 }}
+          className="flex items-center justify-between"
+        >
           <div className="flex items-center gap-1.5">
             <BackBtn />
           </div>
           <div className="flex items-center gap-3">
-            <button
+            <motion.button
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.5, duration: 0.7 }}
               className={`btn btn-sm btn-primary  ${
                 tab === false ? 'btn-soft' : ''
               }`}
@@ -220,8 +237,11 @@ const MyToolsPage = () => {
             >
               <LuAward size={17} />
               Current
-            </button>
-            <button
+            </motion.button>
+            <motion.button
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.7 }}
               className={`btn btn-sm btn-primary  ${
                 tab === true ? 'btn-soft' : ''
               }`}
@@ -229,33 +249,51 @@ const MyToolsPage = () => {
             >
               <LuCookingPot size={17} />
               Cooking
-            </button>
+            </motion.button>
           </div>
-        </div>
-        <div className="mt-9 w-full text-primary">
+        </motion.div>
+        <div className="mt-5 w-full text-primary">
           {tab ? (
             <div>
-              <h3 className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+              <motion.h3
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.7 }}
+                className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto"
+              >
                 Sometimes the biggest bugs come from the tiniest mistakes — and
                 that’s just dev life. Laugh it off, learn, and keep coding. 😉
-              </h3>
-              <div>
+              </motion.h3>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1.3, duration: 0.7 }}
+              >
                 <ToolCard data={myTools} type="default" />
-              </div>
+              </motion.div>
             </div>
           ) : (
-            <div>
-              <h3 className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto">
+            <motion.div layout>
+              <motion.h3
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1, duration: 0.7 }}
+                className="text-md md:w-1/2 text-center tracking-wide text-gray-400 mx-auto"
+              >
                 Still burning rice, but also burning with passion. Learning the
                 art of cooking—one overcooked egg at a time. 🍳
-              </h3>
-              <div>
+              </motion.h3>
+              <motion.div
+                initial={{ y: -50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 1.3, duration: 0.7 }}
+              >
                 <ToolCard data={myTools} type="cook" />
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           )}
         </div>
-      </div>
+      </motion.div>
     </>
   )
 }

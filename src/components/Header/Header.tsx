@@ -16,7 +16,7 @@ const menuItems = [
   { label: 'projects', path: '/projects', icon: <TbLayout2 size={15} /> },
   { label: 'my tools', path: '/my-tools', icon: <VscTools size={15} /> },
   { label: 'about dev', path: '/about-dev', icon: <TbUser size={15} /> },
-  { label: 'blogs', path: '/blogs', icon: <TbTemplate size={15} /> },
+  { label: 'blog', path: '/blog', icon: <TbTemplate size={15} /> },
 ]
 
 const Header = () => {

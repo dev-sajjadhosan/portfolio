@@ -15,7 +15,10 @@ const HomePage = () => {
     <>
       <ResumeView />
 
-      <div className="p-5 flex flex-col justify-between min-h-[95.5vh] md:h-screen relative z-20">
+      <motion.div
+        layout
+        className="p-5 flex flex-col justify-between min-h-[95.5vh] md:h-screen relative z-20"
+      >
         <Header />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +130,7 @@ const HomePage = () => {
             <TbDeviceDesktop size={19} />
           </motion.button>
         </motion.footer>
-      </div>
+      </motion.div>
     </>
   )
 }

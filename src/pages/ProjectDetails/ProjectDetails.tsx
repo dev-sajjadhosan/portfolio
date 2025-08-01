@@ -3,7 +3,6 @@ import {
   TbExternalLink,
   TbLocationShare,
   TbUsersGroup,
-  TbUserStar,
 } from 'react-icons/tb'
 import BackBtn from '../../components/shared/BackBtn'
 import { motion } from 'motion/react'
@@ -14,7 +13,7 @@ import Footer from '../../components/shared/Footer'
 const ProjectDetails = () => {
   return (
     <>
-      <div className="p-7 text-primary">
+      <motion.div layout className="p-7 text-primary">
         <div className="flex items-center justify-between mb-7">
           <BackBtn type="default" />
           <div className="flex items-center gap-3">
@@ -25,11 +24,7 @@ const ProjectDetails = () => {
             </div>
             <button className="btn btn-primary btn-soft px-3">
               <TbUsersGroup size={17} />
-              Contribute
-            </button>
-            <button className="btn btn-primary px-3">
-              <TbUserStar size={17} />
-              Hire me
+              Let's Contribute
             </button>
           </div>
         </div>
@@ -199,7 +194,7 @@ const ProjectDetails = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </>
   )
