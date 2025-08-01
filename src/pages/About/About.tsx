@@ -52,8 +52,8 @@ const AboutDev = () => {
               transition={{ delay: 0.7, duration: 0.7 }}
               className="text-xl tracking-wide"
             >
-              Hey, I’m Mohammad Sajjad Hosan — the guy who crafts clean code,
-              chaotic ideas, and pixel-perfect vibes.
+              Assalamu Alaikium, I’m Mohammad Sajjad Hosan — the guy who crafts
+              clean code, chaotic ideas, and pixel-perfect vibes.
             </motion.h1>
             <motion.h3
               initial={{ y: -50, opacity: 0 }}
@@ -69,7 +69,8 @@ const AboutDev = () => {
               <br />I started coding in the late nights with HTML & CSS, then
               fell down the rabbit hole of JavaScript, Node, React, MongoDB —
               and never came back. Right now, I’m exploring 3D web design, AI
-              integrations, and building tools that feel like magic.
+              integrations, and gaining knowledge to building tools that feel
+              like magic.
             </motion.h3>
           </div>
           <div className="mt-7">
@@ -116,12 +117,14 @@ const AboutDev = () => {
                 className="font-light tracking-wide"
               >
                 {' '}
-                What I say a lot:
+                What my brain buddy thought:
               </motion.p>
               {[
-                '- Hold on, I just had an idea…',
-                '   - Let me just refactor this real quick.',
-                '  - I could’ve done this in 10 lines, but I made it beautiful   instead.',
+                '- Hold on, make this more user friendly.',
+                '- Make simple but modern , animated but smoothy pages.',
+                '- Love to gain new Knowledge on any field and use them on my own profession.',
+                ' - Want to build/Built the best modern, Clean, and efficient OpEn-SoUrCe PrOjEcT to help other.',
+                '-',
               ].map((l, i) => (
                 <motion.li
                   initial={{ y: 50, opacity: 0 }}
@@ -207,8 +210,11 @@ const AboutDev = () => {
             >
               I believe the best products are built by devs who care — not just
               about code, but about users. Every pixel, every API, every
-              function is a piece of a bigger puzzle: **creating human-centric
-              digital experiences** that actually mean something.
+              function is a piece of a bigger puzzle:{' '}
+              <span className="text-info">
+                **creating human-centric digital experiences**
+              </span>{' '}
+              that actually mean something.
               <br />
               <br />
               Code is my craft, but creativity is my fuel.

@@ -10,7 +10,7 @@ body {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 .karla {
@@ -27,4 +27,7 @@ body {
   @apply shadow-none;
   @apply border-0;
   @apply font-medium;
+}
+@utility tooltip {
+  @apply tooltip-primary;
 }
