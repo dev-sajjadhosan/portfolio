@@ -8,6 +8,7 @@ import ProjectView from '../../components/ProjectView/ProjectView'
 import BackBtn from '../../components/shared/BackBtn'
 import Filters from '../../components/shared/Filters'
 import useAuth from '../../hooks/useAuth'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const ProjectsPage = () => {
   const { filter, isView, isLayout } = useAuth()
@@ -15,6 +16,7 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <HelmetTitle title="Projects - Portfolio" />
       <motion.div
         layout
         className="flex flex-col justify-between items-center bg-[#09090b] p-5 text-primary"

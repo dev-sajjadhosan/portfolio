@@ -16,6 +16,7 @@ import ViewLocation from '../../components/shared/ViewLocation'
 import Viewqrcode from '../../components/shared/Viewqrcode'
 import ComingSoon from '../../components/shared/Coming'
 import ViewCollaborate from '../../components/shared/ViewCollaberate'
+import Dashboard from '../Dashboard/Dashboard'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -42,7 +43,18 @@ const RouteLoaderWrapper = () => {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/contact" element={<ContactPage />} />
 
+      {/* --------------------- */}
+
+      <Route path="/dashboard" element={<Dashboard />}>
+        <Route path="/dashboard" element={<h1>Dashboard Home</h1>} />
+        <Route path="add-project" element={<h1>Dashboard Create Project</h1>} />
+        <Route path="tools" element={<h1>Dashboard Add Tools</h1>} />
+        <Route path="notification" element={<h1>Dashboard Notification</h1>} />
+        <Route path="analyses" element={<h1>Dashboard analyses</h1>} />
+      </Route>
       <Route path="*" element={<NotFound />} />
+
+      {/* --------------------- */}
     </Routes>
   )
 }

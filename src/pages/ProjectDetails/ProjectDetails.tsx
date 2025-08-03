@@ -9,10 +9,12 @@ import { motion } from 'motion/react'
 import { VscRepo } from 'react-icons/vsc'
 import ProjectScreenshots from '../../components/shared/ProjectScreenshots'
 import Footer from '../../components/shared/Footer'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const ProjectDetails = () => {
   return (
     <>
+      <HelmetTitle title="Project Details - Portfolio" />
       <motion.div layout className="p-7 text-primary">
         <div className="flex items-center justify-between mb-7">
           <BackBtn type="default" />

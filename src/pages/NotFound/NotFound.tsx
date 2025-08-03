@@ -3,10 +3,12 @@ import error from '../../assets/error.json'
 import { motion } from 'motion/react'
 
 import Player from 'lottie-react'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const NotFound = () => {
   return (
     <>
+      <HelmetTitle title="404 - Page Not Found" />
       <motion.div
         layout
          className="flex items-center justify-center flex-col gap-1 bg-[#09090b] text-white min-h-[95.5vh] lg:h-screen"

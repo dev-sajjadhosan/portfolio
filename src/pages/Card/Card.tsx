@@ -14,6 +14,7 @@ import image from '../../assets/user.png'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
 import ShareModal from '../../components/Share/Share'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const socialLinks = [
   {
@@ -52,6 +53,7 @@ const socialLinks = [
 const CardView = () => {
   return (
     <>
+      <HelmetTitle title="Welcome - Portfolio" />1
       <ShareModal
         title={'portfolio'}
         url="https://mohammadsajjadhosan.vercel.app"

@@ -37,6 +37,7 @@ import {
 import { useState } from 'react'
 import ToolCard from '../../components/shared/ToolCard'
 import { motion } from 'motion/react'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 // import useAuth from '../../hooks/useAuth'
 
 const skillTitles = ['Frontend', 'Application', 'Backend', 'Hosting', 'Others']
@@ -320,6 +321,7 @@ const MyToolsPage = () => {
 
   return (
     <>
+      <HelmetTitle title="Tools - Portfolio" />
       <motion.div layout className="h-full p-7">
         <motion.div
           initial={{ y: -50, opacity: 0 }}

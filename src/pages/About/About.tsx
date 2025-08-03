@@ -9,10 +9,12 @@ import dev from '../../assets/user.png'
 import Socials from '../../components/shared/Socials'
 import { Link } from 'react-router-dom'
 import { motion } from 'motion/react'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const AboutDev = () => {
   return (
     <>
+      <HelmetTitle title="About - Portfolio" />
       <motion.div className="p-7" layout>
         <motion.div
           initial={{ y: -50, opacity: 0 }}

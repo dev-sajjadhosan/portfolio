@@ -7,6 +7,7 @@ import { TbEyeShare, TbHome, TbMicrophone, TbSearch } from 'react-icons/tb'
 import { LiaTruckLoadingSolid } from 'react-icons/lia'
 import { PiBatteryEmptyDuotone } from 'react-icons/pi'
 import { Link } from 'react-router-dom'
+import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const BlogPage = () => {
   const [isFilter, setIsFilter] = useState(false)
@@ -15,6 +16,8 @@ const BlogPage = () => {
 
   return (
     <>
+      <HelmetTitle title="Blog - Portfolio" />
+
       <div className="p-7 min-h-screen">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
