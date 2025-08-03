@@ -4,6 +4,8 @@
 @plugin "daisyui" {
   themes: all;
 }
+@import "leaflet/dist/leaflet.css";
+
 
 body {
   font-family: 'Karla', sans-serif;

@@ -2,6 +2,8 @@ import { MdOutlineFileOpen } from 'react-icons/md'
 import { TbDownload } from 'react-icons/tb'
 
 const ResumeView = () => {
+  const link =
+    'https://docs.google.com/document/d/1E8Wpb1BBAwtDrozpW5xOCNHKXL3WY-jq_fCQzacO_P8/preview?tab=t.0'
   return (
     <>
       <dialog className="modal" id="resume_modal">
@@ -12,7 +14,7 @@ const ResumeView = () => {
               <button
                 className="btn btn-sm btn-primary btn-ghost"
                 onClick={() => {
-                  window.open('/public/resume.pdf', '_blank')
+                  window.open(link, '_blank')
                 }}
               >
                 <MdOutlineFileOpen size={17} />
@@ -20,7 +22,7 @@ const ResumeView = () => {
               </button>
               <a
                 className="btn btn-sm btn-info"
-                href="/public/resume.pdf"
+                href="/mohammad-sajjad-hosan.pdf"
                 download
               >
                 <TbDownload size={17} />
@@ -35,7 +37,7 @@ const ResumeView = () => {
           </div>
           <div className="mt-7">
             <iframe
-              src="/public/resume.pdf#toolbar=0&zoom=42.3"
+              src={`${link}#toolbar=0&zoom=2.3`}
               className="w-full h-[30rem] border-0"
               contentEditable={false}
             ></iframe>

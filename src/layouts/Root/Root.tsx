@@ -11,6 +11,11 @@ import ProjectDetails from '../../pages/ProjectDetails/ProjectDetails'
 import MyToolsPage from '../../pages/MyTools/MyTools'
 import AboutDev from '../../pages/About/About'
 import BlogPage from '../../pages/Blog/Blog'
+import ContactPage from '../../pages/Contact/Contact'
+import ViewLocation from '../../components/shared/ViewLocation'
+import Viewqrcode from '../../components/shared/Viewqrcode'
+import ComingSoon from '../../components/shared/Coming'
+import ViewCollaborate from '../../components/shared/ViewCollaberate'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -35,6 +40,7 @@ const RouteLoaderWrapper = () => {
       <Route path="/my-tools" element={<MyToolsPage />} />
       <Route path="/about-dev" element={<AboutDev />} />
       <Route path="/blog" element={<BlogPage />} />
+      <Route path="/contact" element={<ContactPage />} />
 
       <Route path="*" element={<NotFound />} />
     </Routes>
@@ -46,6 +52,10 @@ const RootLay = () => {
     <AuthProvider>
       <div data-theme="luxury">
         <Feedback />
+        <ViewLocation />
+        <Viewqrcode />
+        <ComingSoon />
+        <ViewCollaborate />
 
         <BrowserRouter>
           <RouteLoaderWrapper />

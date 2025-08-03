@@ -126,6 +126,12 @@ const HomePage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.9, duration: 0.4 }}
             className="btn btn-md btn-circle btn-accent"
+            onClick={() => {
+              const modal = document.getElementById(
+                'coming_view',
+              ) as HTMLDialogElement
+              modal?.showModal()
+            }}
           >
             <TbDeviceDesktop size={19} />
           </motion.button>

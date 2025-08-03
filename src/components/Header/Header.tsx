@@ -114,12 +114,17 @@ const Header = () => {
             Contact
           </motion.button>
         </Link>
-        <Link to="/collaboration">
-          <motion.button className="btn btn-sm btn-primary btn-soft flex items-center gap-1">
-            <TbUserCode size={17} />
-            Collaborate
-          </motion.button>
-        </Link>
+        <motion.button
+          className="btn btn-sm btn-primary btn-soft flex items-center gap-1"
+          onClick={() =>
+            (
+              document.getElementById('view_collaberate') as HTMLDialogElement
+            )?.showModal()
+          }
+        >
+          <TbUserCode size={17} />
+          Collaborate
+        </motion.button>
       </motion.div>
 
       <motion.div
@@ -134,12 +139,18 @@ const Header = () => {
             Contact
           </motion.button>
         </Link>
-        <Link to="/collaboration">
-          <motion.button className="btn btn-sm btn-primary btn-soft flex items-center gap-1">
-            <TbUserCode size={17} />
-            Collaborate
-          </motion.button>
-        </Link>
+
+        <motion.button
+          className="btn btn-sm btn-primary btn-soft flex items-center gap-1"
+          onClick={() =>
+            (
+              document.getElementById('view_collaberate') as HTMLDialogElement
+            )?.showModal()
+          }
+        >
+          <TbUserCode size={17} />
+          Collaborate
+        </motion.button>
       </motion.div>
     </motion.header>
   )

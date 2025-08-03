@@ -2,7 +2,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { useState } from 'react'
 import { LuListFilter } from 'react-icons/lu'
 import { TbUserCode } from 'react-icons/tb'
-import { Link } from 'react-router-dom'
+
 import CustomizeDropdown from '../../components/Customization/Customization'
 import ProjectView from '../../components/ProjectView/ProjectView'
 import BackBtn from '../../components/shared/BackBtn'
@@ -70,12 +70,19 @@ const ProjectsPage = () => {
               >
                 My Projects
               </motion.h3>
-              <Link to="/collaboration">
-                <motion.button className="btn btn-sm btn-primary btn-soft flex items-center gap-1">
-                  <TbUserCode size={17} />
-                  Collaborate
-                </motion.button>
-              </Link>
+              <motion.button
+                className="btn btn-sm btn-primary btn-soft flex items-center gap-1"
+                onClick={() =>
+                  (
+                    document.getElementById(
+                      'view_collaberate',
+                    ) as HTMLDialogElement
+                  )?.showModal()
+                }
+              >
+                <TbUserCode size={17} />
+                Collaborate
+              </motion.button>
             </motion.div>
             <AnimatePresence>
               <motion.div
