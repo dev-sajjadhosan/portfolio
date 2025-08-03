@@ -25,6 +25,8 @@ interface ContextProps {
   setIsView: Dispatch<SetStateAction<isViewProps | string | number>> | undefined
   isCard: isCardProps | string
   setIsCard: Dispatch<SetStateAction<isCardProps | string>> | undefined
+  isToolDefault: boolean
+  setIsToolsDefault: Dispatch<SetStateAction<boolean>>
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
@@ -36,6 +38,7 @@ const AuthProvider = ({ children }: ProviderProps) => {
   const [isLayout, setIsLayout] = useState<isLayoutProps | string>('column')
   const [isView, setIsView] = useState<isViewProps | string | number>(1)
   const [isCard, setIsCard] = useState<isCardProps | string>('both')
+  const [isToolDefault, setIsToolsDefault] = useState(false)
 
   const contextValues = {
     period,
@@ -48,6 +51,8 @@ const AuthProvider = ({ children }: ProviderProps) => {
     setIsView,
     isCard,
     setIsCard,
+    isToolDefault,
+    setIsToolsDefault,
   }
 
   return (

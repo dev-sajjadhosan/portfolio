@@ -4,26 +4,52 @@ import BackBtn from '../../components/shared/BackBtn'
 import { TbQrcode, TbScanEye, TbUserStar } from 'react-icons/tb'
 import { useState } from 'react'
 import { motion } from 'motion/react'
+import { useForm } from 'react-hook-form'
 
 const ContactPage = () => {
+  const {
+    register,
+    handleSubmit,
+    // formState: { errors },
+  } = useForm()
   const [form, setForm] = useState({
     name: '',
     email: '',
     message: '',
   })
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
+
+  const handleFormSubmit = () => {
+    const data = {
+      name: form.name,
+      email: form.email,
+      message: form.message,
+    }
+    setForm(data)
+
+    console.log('Form submitted:', data)
+    // You can add further logic here, such as sending the data to a server
+  }
+
   return (
-    <section className="min-h-screen p-7 text-primary">
-      <div className="flex items-center justify-between mb-5">
+    <motion.section layout className="min-h-screen p-7 text-primary">
+      <motion.div
+        initial={{ y: -50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.1, duration: 0.7 }}
+        className="flex items-center justify-between mb-5"
+      >
         <BackBtn />
         <div className="flex items-center gap-2">
           <motion.button
             initial={{ y: -50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.3, duration: 0.7 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5, duration: 0.7 }}
             className="btn btn-sm btn-primary btn-soft px-5"
           >
             <TbUserStar size={17} />
@@ -32,7 +58,7 @@ const ContactPage = () => {
           <motion.button
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.4 }}
+            transition={{ delay: 0.7, duration: 0.7 }}
             className="btn btn-sm btn-primary btn-soft px-3"
             onClick={() => {
               const modal = document.getElementById(
@@ -45,59 +71,110 @@ const ContactPage = () => {
             View Resume
           </motion.button>
         </div>
-      </div>
+      </motion.div>
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-2">Let's Talk</h2>
-        <p className="text-lg text-neutral-500">
+        <motion.h2
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.9, duration: 0.7 }}
+          className="text-4xl font-bold mb-2"
+        >
+          Let's Talk
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.7 }}
+          className="text-lg text-neutral-500"
+        >
           Got a project, job, or just wanna vibe? Drop me a line 📩
-        </p>
+        </motion.p>
       </div>
       <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto mt-19">
         {/* Contact Info */}
         {form?.name || form?.email || form?.message ? (
-          <div className="bg-base-300 card overflow-hidden p-5">
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1, duration: 0.7 }}
+            className="bg-base-300 card overflow-hidden p-5"
+          >
             {/* Header */}
             <div className="flex items-center justify-between mb-1">
-              <div className="font-normal text-primary">New Message</div>
-              <span className="text-xs text-gray-400">
+              <motion.h3
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.7 }}
+                className="font-normal text-primary"
+              >
+                New Message
+              </motion.h3>
+              <motion.span
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
+                className="text-xs text-gray-400 badge"
+              >
                 {new Date().toLocaleString()}
-              </span>
+              </motion.span>
             </div>
 
             {/* Body */}
             <div className="px-4 py-3 space-y-1">
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
+              >
                 <span className="font-light text-gray-300">From:</span>{' '}
                 <span className="link link-info no-underline">
                   {form.email || 'no@gmail.yet'}
                 </span>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.7 }}
+              >
                 <span className="font-light text-gray-300">Name:</span>{' '}
                 <span>{form.name || 'Anonymous'}</span>
-              </div>
+              </motion.div>
 
-              <div>
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.7 }}
+              >
                 <span className="font-light text-gray-300">
                   Message:
                   <p className="mt-1 whitespace-pre-nowrap text-xs tracking-wider text-gray-400">
                     {form.message.slice(0, 800) + '....' || 'No message yet.'}
                   </p>
                 </span>
-              </div>
+              </motion.div>
             </div>
 
             {/* Footer */}
 
-            <span className="text-xs italic text-neutral-400 justify-self-end mt-auto self-end">
+            <motion.span
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.7 }}
+              className="text-xs italic text-neutral-400 justify-self-end mt-auto self-end"
+            >
               Preview only — not sent yet
-            </span>
-          </div>
+            </motion.span>
+          </motion.div>
         ) : (
           <div className="flex flex-col gap-3">
             <Socials />
-            <div className="flex items-start gap-4 my-7">
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.7 }}
+              className="flex items-start gap-4 my-7"
+            >
               <MdEmail className="text-xl mt-1" />
               <div>
                 <h4 className="font-semibold">Email</h4>
@@ -108,8 +185,13 @@ const ContactPage = () => {
                   devsajjadhosan@gmail.com
                 </a>
               </div>
-            </div>
-            <div className="flex items-start gap-4 my-1 mb-7">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.7 }}
+              className="flex items-start gap-4 my-1 mb-7"
+            >
               <MdPhone className="text-xl mt-1" />
               <div>
                 <h4 className="font-semibold">Phone</h4>
@@ -117,9 +199,12 @@ const ContactPage = () => {
                   +8801822398936
                 </a>
               </div>
-            </div>
+            </motion.div>
 
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.7 }}
               className="btn btn-primary btn-soft"
               onClick={() => {
                 const dialog = document.getElementById(
@@ -130,9 +215,12 @@ const ContactPage = () => {
             >
               <TbQrcode className="text-xl mt-1" />
               Instant Contact
-            </button>
+            </motion.button>
 
-            <button
+            <motion.button
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.7 }}
               className="btn btn-primary btn-soft"
               onClick={() => {
                 const dialog = document.getElementById(
@@ -143,26 +231,45 @@ const ContactPage = () => {
             >
               <MdLocationOn className="text-xl mt-1" />
               Location
-            </button>
+            </motion.button>
           </div>
         )}
 
         {/* Contact Form */}
-        <form className="space-y-6">
-          <h3 className="text-lg">Want to say hello!</h3>
-          <input
+        <motion.form
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.7 }}
+          className="space-y-6"
+          onSubmit={handleSubmit(handleFormSubmit)}
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="text-lg"
+          >
+            Want to say hello!
+          </motion.h3>
+          <motion.input
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.7 }}
             type="text"
-            name="name"
             value={form.name}
+            {...register('name', { required: true })}
             onChange={handleChange}
             className="w-full border-0 focus:border-b border-gray-400 outline-0 py-2 px-3 text-sm"
             placeholder="Your name"
             required
           />
 
-          <input
+          <motion.input
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.7, duration: 0.7 }}
             type="email"
-            name="email"
+            {...register('email', { required: true })}
             value={form.email}
             onChange={handleChange}
             className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
@@ -170,25 +277,31 @@ const ContactPage = () => {
             required
           />
 
-          <textarea
+          <motion.textarea
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.7 }}
             className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
             rows={7}
-            name="message"
+            {...register('message', { required: true })}
             value={form.message}
             onChange={handleChange}
             placeholder="Type your message here..."
             required
-          ></textarea>
+          ></motion.textarea>
 
-          <button
+          <motion.button
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1, duration: 0.7 }}
             type="submit"
             className="btn btn-sm btn-primary btn-soft px-7"
           >
             🚀 Send Message
-          </button>
-        </form>
+          </motion.button>
+        </motion.form>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

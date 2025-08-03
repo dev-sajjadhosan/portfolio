@@ -3,23 +3,27 @@ import { useState } from 'react'
 import { TbBomb, TbCategory2 } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import FloatToolDropdown from './FloatToolDropdown'
+import useAuth from '../../hooks/useAuth'
 
 const ToolCard = ({
   data,
+  skillTitles,
   type,
 }: {
   type: string
+  skillTitles: string[]
   data: {
     title: string
     tools: {
       img: string
-      size: number
+      size?: number
       title: string
       url: string
       id: number
     }[]
   }[]
 }) => {
+  const { isToolDefault, setIsToolsDefault } = useAuth()
   const [filter, setFilter] = useState('frontend')
   const [index, setIndex] = useState(0)
 
@@ -101,7 +105,7 @@ const ToolCard = ({
             Tech Categories
           </motion.h3>
           <ul className="flex flex-col gap-1.5 w-full mt-3">
-            {data.map((l, i) => (
+            {skillTitles.map((l, i) => (
               <motion.li
                 initial={{ y: -50, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -110,17 +114,23 @@ const ToolCard = ({
                   duration: 0.7,
                   ease: 'backInOut',
                 }}
-                onClick={() => handleFilter(l.title, i)}
+                onClick={() => handleFilter(l, i)}
                 className={`btn btn-sm justify-between btn-primary capitalize ${
-                  filter === l?.title ? 'btn-soft' : 'btn-ghost'
+                  filter === l ? 'btn-soft' : 'btn-ghost'
                 }`}
               >
-                <a>{l?.title}</a>
-                <span className="badge badge-sm badge-info badge-soft">
-                  {l?.tools?.length}
-                </span>
+                <a>{l}</a>
               </motion.li>
             ))}
+            <motion.li
+              className="btn btn-sm justify-center btn-primary btn-soft"
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              onClick={() => setIsToolsDefault(!isToolDefault)}
+              transition={{ delay: 0.5 * skillTitles.length, duration: 0.7 }}
+            >
+              <a>Default mode</a>
+            </motion.li>
           </ul>
         </div>
       </div>

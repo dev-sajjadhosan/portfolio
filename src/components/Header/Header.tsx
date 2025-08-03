@@ -25,7 +25,7 @@ const Header = () => {
     <motion.header
       initial={{ y: -50, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ type: 'spring', delay: 0 }}
+      transition={{ type: 'spring', delay: 0, duration: 0.7 }}
       className="navbar bg-base-100"
     >
       {/* 1️⃣ Name */}

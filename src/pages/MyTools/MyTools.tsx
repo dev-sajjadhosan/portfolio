@@ -37,6 +37,9 @@ import {
 import { useState } from 'react'
 import ToolCard from '../../components/shared/ToolCard'
 import { motion } from 'motion/react'
+// import useAuth from '../../hooks/useAuth'
+
+const skillTitles = ['Frontend', 'Application', 'Backend', 'Hosting', 'Others']
 
 const myTools = [
   {
@@ -193,7 +196,7 @@ const myTools = [
         title: 'trae ide',
         img: trae,
         url: 'https://www.trae.ai/',
-        size: '100',
+        size: 100,
       },
       { id: 2, title: 'git', img: git, url: 'https://git-scm.com/' },
       { id: 3, title: 'github', img: github, url: 'https://github.com/' },
@@ -208,11 +211,113 @@ const myTools = [
     ],
   },
 ]
+const mycomingTools = [
+  {
+    title: 'frontend',
+    tools: [
+      {
+        id: 0,
+        title: 'nextjs',
+        img: '',
+        url: '',
+      },
+      {
+        id: 1,
+        title: 'angular',
+        img: '',
+        url: '',
+      },
+      {
+        id: 2,
+        title: 'vue',
+        img: '',
+        url: '',
+      },
+    ],
+  },
+  {
+    title: 'application',
+    tools: [
+      {
+        id: 0,
+        title: 'react native',
+        img: '',
+        url: '',
+      },
+    ],
+  },
+  {
+    title: 'backend',
+    tools: [
+      { id: 0, title: 'python', img: '', url: '' },
+      {
+        id: 1,
+        title: 'rust',
+        img: '',
+        url: '',
+      },
+      {
+        id: 2,
+        title: 'go',
+        img: '',
+        url: '',
+      },
+      {
+        id: 3,
+        title: 'graphql',
+        img: '',
+        url: '',
+      },
+      {
+        id: 4,
+        title: 'zustand',
+        img: '',
+        url: '',
+      },
+      {
+        id: 5,
+        title: 'redis',
+        img: '',
+        url: '',
+      },
+      {
+        id: 6,
+        title: 'docker',
+        img: '',
+        url: '',
+      },
+    ],
+  },
+  {
+    title: 'hosting',
+    tools: [{ id: 0, title: 'netlify', img: '', url: '' }],
+  },
+  {
+    title: 'others',
+    tools: [
+      {
+        id: 0,
+        title: 'framer',
+        img: '',
+        url: '',
+      },
+      {
+        id: 1,
+        title: 'Coming Soon',
+        img: '',
+        url: '',
+        size: 100,
+      },
+    ],
+  },
+]
 
 // mytool array for cooking part
 
 const MyToolsPage = () => {
+  // const { isToolDefault } = useAuth()
   const [tab, seTab] = useState(true)
+
   return (
     <>
       <motion.div layout className="h-full p-7">
@@ -269,7 +374,11 @@ const MyToolsPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <ToolCard data={myTools} type="default" />
+                <ToolCard
+                  data={myTools}
+                  skillTitles={skillTitles}
+                  type="default"
+                />
               </motion.div>
             </div>
           ) : (
@@ -288,7 +397,11 @@ const MyToolsPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <ToolCard data={myTools} type="cook" />
+                <ToolCard
+                  data={mycomingTools}
+                  skillTitles={skillTitles}
+                  type="cook"
+                />
               </motion.div>
             </motion.div>
           )}
