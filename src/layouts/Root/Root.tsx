@@ -16,7 +16,8 @@ import ViewLocation from '../../components/shared/ViewLocation'
 import Viewqrcode from '../../components/shared/Viewqrcode'
 import ComingSoon from '../../components/shared/Coming'
 import ViewCollaborate from '../../components/shared/ViewCollaberate'
-import Dashboard from '../Dashboard/Dashboard'
+// import Dashboard from '../Dashboard/Dashboard'
+// import CreateProject from '../../dpages/CreateProject/CreateProject'
 
 const RouteLoaderWrapper = () => {
   const location = useLocation()
@@ -37,7 +38,7 @@ const RouteLoaderWrapper = () => {
       <Route path="/" element={<CardView />} />
       <Route path="/home" element={<HomePage />} />
       <Route path="/projects" element={<ProjectsPage />} />
-      <Route path="/view/:title" element={<ProjectDetails />} />
+      <Route path="/view/:id" element={<ProjectDetails />} />
       <Route path="/my-tools" element={<MyToolsPage />} />
       <Route path="/about-dev" element={<AboutDev />} />
       <Route path="/blog" element={<BlogPage />} />
@@ -45,13 +46,14 @@ const RouteLoaderWrapper = () => {
 
       {/* --------------------- */}
 
-      <Route path="/dashboard" element={<Dashboard />}>
+      {/* <Route path="/dashboard" element={<Dashboard />}>
         <Route path="/dashboard" element={<h1>Dashboard Home</h1>} />
-        <Route path="add-project" element={<h1>Dashboard Create Project</h1>} />
+        <Route path="add-project" element={<CreateProject />} />
+        <Route path="add-blog" element={<h1>Dashboard Create Blog</h1>} />
         <Route path="tools" element={<h1>Dashboard Add Tools</h1>} />
         <Route path="notification" element={<h1>Dashboard Notification</h1>} />
         <Route path="analyses" element={<h1>Dashboard analyses</h1>} />
-      </Route>
+      </Route> */}
       <Route path="*" element={<NotFound />} />
 
       {/* --------------------- */}

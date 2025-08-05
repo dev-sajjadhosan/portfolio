@@ -38,7 +38,7 @@ const AuthProvider = ({ children }: ProviderProps) => {
   const [isLayout, setIsLayout] = useState<isLayoutProps | string>('column')
   const [isView, setIsView] = useState<isViewProps | string | number>(1)
   const [isCard, setIsCard] = useState<isCardProps | string>('both')
-  const [isToolDefault, setIsToolsDefault] = useState(false)
+  const [isToolDefault, setIsToolsDefault] = useState(true)
 
   const contextValues = {
     period,

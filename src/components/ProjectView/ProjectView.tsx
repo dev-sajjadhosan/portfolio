@@ -1,18 +1,31 @@
 import { motion } from 'framer-motion'
-import { TbBellShare, TbClick, TbExternalLink, TbLocationShare, TbTextCaption } from 'react-icons/tb'
+import {
+  TbBellShare,
+  TbClick,
+  TbExternalLink,
+  TbLocationShare,
+  TbTextCaption,
+} from 'react-icons/tb'
 import image from '../../assets/project.jpg'
 import { VscRepo } from 'react-icons/vsc'
 import ShareModal from '../Share/Share'
 import useAuth from '../../hooks/useAuth'
 import { Link } from 'react-router-dom'
+import type { ProjectType } from '../../../types'
 
-const ProjectView = ({ isFill }: { isFill: string }) => {
+const ProjectView = ({
+  isFill,
+  data,
+}: {
+  isFill: string
+  data: ProjectType
+}) => {
   const { isCard, isLayout, isView } = useAuth()
   return (
     <>
       <ShareModal
-        title={'ai image generated'}
-        url="https://mohammadsajjadhosan.vercel.app/projects/ai-image-generated"
+        title={data?.name}
+        url={`https://mohammadsajjadhosan.vercel.app/view/${data?.name}`}
       />
 
       <motion.div
@@ -48,8 +61,8 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
             } flex flex-col items-center gap-5 relative`}
           >
             <motion.img
-              src={image}
-              alt="project"
+              src={data.picture ?? image}
+              alt={data?.name}
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
@@ -60,6 +73,7 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.4 }}
               className="btn btn-sm px-5 mb-1 absolute right-13 md:right-16 bottom-1"
+              disabled={!data?.isVideo}
             >
               <TbClick size={17} />
               Play
@@ -82,7 +96,7 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
               <span className="text-primary font-semibold">#Project 01</span>
               <div className="flex items-center gap-1.5">
                 <span className="badge badge-primary badge-soft text-xs rounded">
-                  level 01
+                  {data?.level}
                 </span>
                 <motion.button
                   className="btn btn-sm btn-ghost btn-primary tooltip"
@@ -114,19 +128,23 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
             </div>
 
             <div className="my-5 flex items-center gap-2 md:gap-5">
-              <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
-                <VscRepo size={17} />
-                View Repo
-              </motion.button>
-              <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
-                <TbExternalLink size={17} />
-                View Live
-              </motion.button>
-              <Link to='/view/ai-image-generated'>
-              <motion.button className="btn btn-primary btn-sm lg:btn-md">
-                <TbTextCaption size={17} />
-                View Information
-              </motion.button>
+              <Link to={data?.repo?.parent}>
+                <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
+                  <VscRepo size={17} />
+                  View Repo
+                </motion.button>
+              </Link>
+              <Link to={data?.live}>
+                <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
+                  <TbExternalLink size={17} />
+                  View Live
+                </motion.button>
+              </Link>
+              <Link to={`/view/${data?._id}`}>
+                <motion.button className="btn btn-primary btn-sm lg:btn-md">
+                  <TbTextCaption size={17} />
+                  View Information
+                </motion.button>
               </Link>
             </div>
 
@@ -145,10 +163,7 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
                 transition={{ delay: 0.7 }}
                 className="text-sm font-normal tracking-wide"
               >
-                voluptatibus nihil architecto laudantium necessitatibus. Quidem,
-                eligendi asperiores. Excepturi similique a quis recusandae
-                eveniet ut, dolorem optio exercitationem consectetur error aut
-                dicta rerum hic! Voluptatibus nemo.
+                {data?.description.slice(0, 350)}
               </motion.p>
               <motion.h1
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -156,7 +171,7 @@ const ProjectView = ({ isFill }: { isFill: string }) => {
                 transition={{ delay: 0.8 }}
                 className="text-2xl mt-3 text-center text-info"
               >
-                AI Image Generator
+                {data?.name || 'Something Wrong'}
               </motion.h1>
             </div>
           </div>

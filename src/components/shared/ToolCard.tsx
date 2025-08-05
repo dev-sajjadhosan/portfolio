@@ -3,7 +3,6 @@ import { useState } from 'react'
 import { TbBomb, TbCategory2 } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import FloatToolDropdown from './FloatToolDropdown'
-import useAuth from '../../hooks/useAuth'
 
 const ToolCard = ({
   data,
@@ -15,15 +14,14 @@ const ToolCard = ({
   data: {
     title: string
     tools: {
-      img: string
+      img?: string
       size?: number
-      title: string
-      url: string
-      id: number
+      title?: string
+      url?: string
+      id?: number
     }[]
   }[]
 }) => {
-  const { isToolDefault, setIsToolsDefault } = useAuth()
   const [filter, setFilter] = useState('frontend')
   const [index, setIndex] = useState(0)
 
@@ -36,7 +34,7 @@ const ToolCard = ({
     <>
       <FloatToolDropdown handleFilter={handleFilter} filter={filter} />
 
-      <div className="h-[89vh] lg:h-[77.3vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
+      <div className="h-[89vh] lg:min-h-[75.3vh] overflow-hidden flex flex-col md:flex-row justify-between items-center">
         <motion.div
           key={index}
           initial={{ y: 50, opacity: 0 }}
@@ -122,15 +120,6 @@ const ToolCard = ({
                 <a>{l}</a>
               </motion.li>
             ))}
-            <motion.li
-              className="btn btn-sm justify-center btn-primary btn-soft"
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              onClick={() => setIsToolsDefault(!isToolDefault)}
-              transition={{ delay: 0.5 * skillTitles.length, duration: 0.7 }}
-            >
-              <a>Default mode</a>
-            </motion.li>
           </ul>
         </div>
       </div>

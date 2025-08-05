@@ -33,12 +33,31 @@ import {
   reactForm,
   socketio,
   typescript,
+  //
+  angular,
+  docker,
+  framer,
+  go,
+  graphql,
+  netlify,
+  nextjs,
+  python,
+  reactnative,
+  redis,
+  redux,
+  rust,
+  tauri,
+  vue,
+  zustand,
+  cooking,
 } from '../../assets/tools/Tools'
 import { useState } from 'react'
 import ToolCard from '../../components/shared/ToolCard'
 import { motion } from 'motion/react'
 import HelmetTitle from '../../components/shared/HelmeTitle'
-// import useAuth from '../../hooks/useAuth'
+import useAuth from '../../hooks/useAuth'
+import { Link } from 'react-router-dom'
+import { TbBomb, TbLayoutDistributeHorizontal } from 'react-icons/tb'
 
 const skillTitles = ['Frontend', 'Application', 'Backend', 'Hosting', 'Others']
 
@@ -71,6 +90,7 @@ const myTools = [
         img: reactquery,
         url: 'https://tanstack.com/query/latest',
         size: 100,
+        s_size: 30,
       },
       {
         id: 5,
@@ -78,6 +98,7 @@ const myTools = [
         img: reactForm,
         url: 'https://react-hook-form.com/',
         size: 100,
+        s_size: 25,
       },
       {
         id: 6,
@@ -92,6 +113,7 @@ const myTools = [
         img: googleFont,
         url: 'https://fonts.google.com/',
         size: 100,
+        s_size: 30,
       },
       {
         id: 9,
@@ -105,6 +127,7 @@ const myTools = [
         img: daisyui,
         url: 'https://daisyui.com/',
         size: 100,
+        s_size: 25,
       },
     ],
   },
@@ -141,6 +164,7 @@ const myTools = [
         img: jwt,
         url: 'https://jwt.io/',
         size: 100,
+        s_size: 30,
       },
       {
         id: 4,
@@ -198,6 +222,7 @@ const myTools = [
         img: trae,
         url: 'https://www.trae.ai/',
         size: 100,
+        s_size: 30,
       },
       { id: 2, title: 'git', img: git, url: 'https://git-scm.com/' },
       { id: 3, title: 'github', img: github, url: 'https://github.com/' },
@@ -219,20 +244,34 @@ const mycomingTools = [
       {
         id: 0,
         title: 'nextjs',
-        img: '',
-        url: '',
+        img: nextjs,
+        url: 'https://nextjs.org/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 1,
         title: 'angular',
-        img: '',
-        url: '',
+        img: angular,
+        url: 'https://angular.io/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 2,
         title: 'vue',
-        img: '',
-        url: '',
+        img: vue,
+        url: 'https://vuejs.org/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 3,
+        title: 'Coming Soon',
+        img: cooking,
+        url: '/home',
+        size: 100,
+        s_size: 25,
       },
     ],
   },
@@ -242,56 +281,130 @@ const mycomingTools = [
       {
         id: 0,
         title: 'react native',
-        img: '',
-        url: '',
+        img: reactnative,
+        url: 'https://reactnative.dev/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 1,
+        title: 'tauri',
+        img: tauri,
+        url: 'https://tauri.app/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 3,
+        title: 'Coming Soon',
+        img: cooking,
+        url: '/home',
+
+        size: 100,
+        s_size: 25,
       },
     ],
   },
   {
     title: 'backend',
     tools: [
-      { id: 0, title: 'python', img: '', url: '' },
+      {
+        id: 0,
+        title: 'python',
+        img: python,
+        url: 'https://www.python.org/',
+
+        size: 100,
+        s_size: 25,
+      },
       {
         id: 1,
         title: 'rust',
-        img: '',
-        url: '',
+        img: rust,
+        url: 'https://www.rust-lang.org/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 2,
-        title: 'go',
-        img: '',
-        url: '',
+        title: 'golang',
+        img: go,
+        url: 'https://go.dev/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 3,
         title: 'graphql',
-        img: '',
-        url: '',
+        img: graphql,
+        url: 'https://graphql.org/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 4,
         title: 'zustand',
-        img: '',
-        url: '',
+        img: zustand,
+        url: 'https://zustand-demo.pmnd.rs/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 5,
+        title: 'redux',
+        img: redux,
+        url: 'https://redux.js.org/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 5,
         title: 'redis',
-        img: '',
-        url: '',
+        img: redis,
+        url: 'https://redis.io/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 6,
         title: 'docker',
-        img: '',
-        url: '',
+        img: docker,
+        url: 'https://www.docker.com/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 7,
+        title: 'Coming Soon',
+        img: cooking,
+        url: '/home',
+
+        size: 100,
+        s_size: 25,
       },
     ],
   },
   {
     title: 'hosting',
-    tools: [{ id: 0, title: 'netlify', img: '', url: '' }],
+    tools: [
+      {
+        id: 0,
+        title: 'netlify',
+        img: netlify,
+        url: 'https://www.netlify.com/',
+        size: 100,
+        s_size: 25,
+      },
+      {
+        id: 1,
+        title: 'Coming Soon',
+        img: cooking,
+        url: '/home',
+
+        size: 100,
+        s_size: 25,
+      },
+    ],
   },
   {
     title: 'others',
@@ -299,15 +412,18 @@ const mycomingTools = [
       {
         id: 0,
         title: 'framer',
-        img: '',
-        url: '',
+        img: framer,
+        url: 'https://www.framer.com/',
+        size: 100,
+        s_size: 25,
       },
       {
         id: 1,
         title: 'Coming Soon',
-        img: '',
-        url: '',
+        img: cooking,
+        url: '/home',
         size: 100,
+        s_size: 25,
       },
     ],
   },
@@ -316,13 +432,13 @@ const mycomingTools = [
 // mytool array for cooking part
 
 const MyToolsPage = () => {
-  // const { isToolDefault } = useAuth()
+  const { isToolDefault, setIsToolsDefault } = useAuth()
   const [tab, seTab] = useState(true)
 
   return (
     <>
       <HelmetTitle title="Tools - Portfolio" />
-      <motion.div layout className="h-full p-7">
+      <motion.div layout className="min-h-screen p-7">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -333,6 +449,28 @@ const MyToolsPage = () => {
             <BackBtn />
           </div>
           <div className="flex items-center gap-3">
+            <motion.button
+              className={`btn btn-sm btn-warning  ${
+                isToolDefault && 'tooltip tooltip-warning tooltip-bottom'
+              }`}
+              data-tip="Want to try something new?"
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              onClick={() => setIsToolsDefault(!isToolDefault)}
+              transition={{ delay: 0.3, duration: 0.7 }}
+            >
+              {isToolDefault ? (
+                <>
+                  <TbBomb size={17} />
+                  Stack Layout
+                </>
+              ) : (
+                <>
+                  <TbLayoutDistributeHorizontal size={17} />
+                  Default Layout
+                </>
+              )}
+            </motion.button>
             <motion.button
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -376,11 +514,48 @@ const MyToolsPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <ToolCard
-                  data={myTools}
-                  skillTitles={skillTitles}
-                  type="default"
-                />
+                {isToolDefault ? (
+                  <div className="card mt-5 max-w-3xl mx-auto">
+                    {myTools.map((item, i) => (
+                      <div key={i} className="my-2.5">
+                        <motion.h3
+                          initial={{ y: -50, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          transition={{ delay: 0.3 * i, duration: 0.7 }}
+                          className="text-lg capitalize"
+                        >
+                          {item?.title}
+                        </motion.h3>
+                        <div className="mt-2 flex flex-wrap items-center gap-3">
+                          {item?.tools?.map((i, j) => (
+                            <Link to={i?.url} target="_blank">
+                              <motion.div
+                                initial={{ x: 50, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: 0.5 * j, duration: 0.7 }}
+                                key={j}
+                                className="flex gap-1 capitalize rounded-md items-center justify-center px-5 text-sm bg-base-300 cursor-pointer py-1.5"
+                              >
+                                <img
+                                  src={i?.img}
+                                  alt={i?.title}
+                                  width={i?.s_size ?? 45}
+                                />
+                                {i?.title}
+                              </motion.div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ToolCard
+                    data={myTools}
+                    skillTitles={skillTitles}
+                    type="default"
+                  />
+                )}
               </motion.div>
             </div>
           ) : (
@@ -399,11 +574,48 @@ const MyToolsPage = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 1.3, duration: 0.7 }}
               >
-                <ToolCard
-                  data={mycomingTools}
-                  skillTitles={skillTitles}
-                  type="cook"
-                />
+                {isToolDefault ? (
+                  <div className="card mt-5 max-w-3xl mx-auto">
+                    {mycomingTools?.map((item, i) => (
+                      <div key={i} className="my-2.5">
+                        <motion.h3
+                          initial={{ y: -50, opacity: 0 }}
+                          animate={{ y: 0, opacity: 1 }}
+                          transition={{ delay: 0.3 * i, duration: 0.7 }}
+                          className="text-lg capitalize"
+                        >
+                          {item?.title}
+                        </motion.h3>
+                        <div className="mt-2 flex flex-wrap items-center gap-3">
+                          {item?.tools?.map((i, j) => (
+                            <Link to={i?.url} target="_blank">
+                              <motion.div
+                                initial={{ x: 50, opacity: 0 }}
+                                animate={{ x: 0, opacity: 1 }}
+                                transition={{ delay: 0.5 * j, duration: 0.7 }}
+                                key={j}
+                                className="flex gap-1 capitalize rounded-md items-center justify-center px-5 text-sm bg-base-300 cursor-pointer py-1.5"
+                              >
+                                <img
+                                  src={i?.img}
+                                  alt={i?.title}
+                                  width={i?.s_size ?? 45}
+                                />
+                                {i?.title}
+                              </motion.div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <ToolCard
+                    data={mycomingTools}
+                    skillTitles={skillTitles}
+                    type="cook"
+                  />
+                )}
               </motion.div>
             </motion.div>
           )}

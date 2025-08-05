@@ -23,6 +23,11 @@ const dashboardMenu = [
     icon: <TbArrowBigLeftLines size={17} />,
   },
   {
+    name: 'Add Blog',
+    path: '/dashboard/add-blog',
+    icon: <TbArrowBigLeftLines size={17} />,
+  },
+  {
     name: 'Send Notification',
     path: '/dashboard/notification',
     icon: <TbBellSearch size={17} />,
@@ -36,12 +41,12 @@ const dashboardMenu = [
 
 const Dashboard = () => {
   const { pathname } = useLocation()
-  const [isCol, setIsCol] = useState(true)
+  const [isCol, setIsCol] = useState(false)
 
   return (
     <>
-      <div className="flex gap-1 text-primary h-screen">
-        <div className={`flex flex-col ${isCol ? 'w-xs p-5' : 'w-24 p-2'}`}>
+      <div className="flex gap-1 text-primary min-h-screen">
+        <div className={`flex flex-col ${isCol ? 'w-xs p-5' : 'w-20 p-2'}`}>
           <button
             className="btn btn-sm btn-primary btn-soft mx-auto my-5 tooltip tooltip-right px-5"
             data-tip="Collapse"
@@ -78,10 +83,8 @@ const Dashboard = () => {
             ))}
           </ul>
         </div>
-        <div className="p-5 w-full flex justify-center items-center bg-base-300">
-          <h3 className="text-2xl">
-            <Outlet />
-          </h3>
+        <div className="w-full bg-base-300">
+          <Outlet />
         </div>
       </div>
     </>

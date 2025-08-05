@@ -9,17 +9,21 @@ import BackBtn from '../../components/shared/BackBtn'
 import Filters from '../../components/shared/Filters'
 import useAuth from '../../hooks/useAuth'
 import HelmetTitle from '../../components/shared/HelmeTitle'
+import { PiFan } from 'react-icons/pi'
+import useData from '../../hooks/useData'
+import type { ProjectType } from '../../../types'
 
 const ProjectsPage = () => {
   const { filter, isView, isLayout } = useAuth()
   const [isFilter, setIsFilter] = useState(true)
+  const { project } = useData()
 
   return (
     <>
       <HelmetTitle title="Projects - Portfolio" />
       <motion.div
         layout
-        className="flex flex-col justify-between items-center bg-[#09090b] p-5 text-primary"
+        className="flex flex-col min-h-screen bg-[#09090b] p-5 text-primary"
       >
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -87,18 +91,32 @@ const ProjectsPage = () => {
               </motion.button>
             </motion.div>
             <AnimatePresence>
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 40 }}
-                transition={{ duration: 0.4 }}
-                className={` ${
-                  isView === 1
-                    ? 'grid grid-cols-1'
-                    : isView === 2
-                    ? 'grid grid-cols-2'
-                    : 'flex'
-                } 
+              {project?.length <= 0 ? (
+                <div className="p-15 flex flex-col items-center md:w-2xl mx-auto">
+                  <PiFan size={59} className="animate-spin" />
+                  <h3 className="text-3xl">No Project here</h3>
+                  <p className="text-md font-light text-center">
+                    <span className="text-xl text-info">Sorry !</span> Look like
+                    the dev is been very lazy to do his work. Wait we will{' '}
+                    <br />{' '}
+                    <span className="font-semibold capitalize">
+                      came back soon.
+                    </span>
+                  </p>
+                </div>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 40 }}
+                  transition={{ duration: 0.4 }}
+                  className={` ${
+                    isView === 1
+                      ? 'grid grid-cols-1'
+                      : isView === 2
+                      ? 'grid grid-cols-2'
+                      : 'flex'
+                  } 
                 ${
                   isLayout === 'row'
                     ? 'flex flex-row flex-wrap gap-5'
@@ -107,11 +125,12 @@ const ProjectsPage = () => {
                     : 'flex flex-wrap gap-5'
                 }
                 `}
-              >
-                {[...Array(5).keys()].map((i) => (
-                  <ProjectView key={i} isFill={filter} />
-                ))}
-              </motion.div>
+                >
+                  {project?.map((l: ProjectType, i: number) => (
+                    <ProjectView key={i} isFill={filter} data={l} />
+                  ))}
+                </motion.div>
+              )}
             </AnimatePresence>
           </motion.div>
         </div>

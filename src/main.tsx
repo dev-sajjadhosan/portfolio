@@ -3,8 +3,16 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import RootLay from './layouts/Root/Root'
 
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const newQuery = new QueryClient()
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RootLay />
+    <QueryClientProvider client={newQuery}>
+      <RootLay />
+    </QueryClientProvider>
   </StrictMode>,
 )
+
+export default newQuery

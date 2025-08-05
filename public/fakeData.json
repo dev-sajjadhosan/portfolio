@@ -1,0 +1,1082 @@
+[
+  {
+    "name": "Sharable logistical Local Area Network Project 1",
+    "type": "Team",
+    "status": "Completed",
+    "shortVideo": "/videos/project1.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Basic",
+    "picture": "https://i.ibb.co/b5Rphrdt/pic-1.png",
+    "logo": "/logos/project1.svg",
+    "figma": "https://figma.com/file/2827da22-badf-4b46-b84f-50fbd07d2355",
+    "repo": {
+      "parent": "https://github.com/sajjad/project1",
+      "client": "https://github.com/sajjad/project1-client",
+      "server": "https://github.com/sajjad/project1-server"
+    },
+    "live": "https://project1.vercel.app",
+    "technologies": [
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      },
+      {
+        "name": "React.js",
+        "url": "https://react.dev",
+        "icon": "/icons/react.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "Base machine each form likely card sing answer.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Training bar air statement fact half."
+      },
+      {
+        "name": "Feature B",
+        "description": "Very prevent hold buy lead build yard."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Remember reason admit care budget."
+      }
+    ],
+    "description": "Fire hundred eye begin. Behind season order buy. Black provide door realize security.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project1-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Bar mind enter including glass travel remember fact."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project1-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Through figure either save yard."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 26
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 29
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 8
+      }
+    ],
+    "projectTime": {
+      "start": "2024-11-05",
+      "end": "2025-05-07",
+      "duration": "6 month(s) 3 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Gary Wiley",
+        "email": "oaustin@yahoo.com",
+        "message": "Explain race grow identify four heart fast."
+      },
+      {
+        "name": "Jennifer Barnes",
+        "email": "martineznichole@henderson-carter.com",
+        "message": "Draw street price."
+      }
+    ]
+  },
+  {
+    "name": "Ergonomic exuding framework Project 2",
+    "type": "Team",
+    "status": "Completed",
+    "shortVideo": "/videos/project2.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Professional",
+    "picture": "https://i.ibb.co/JWfF8vF5/pic-2.png",
+    "logo": "/logos/project2.svg",
+    "figma": "https://figma.com/file/7f191d2f-f0da-4f05-a94b-00fdb5fd9a9b",
+    "repo": {
+      "parent": "https://github.com/sajjad/project2",
+      "client": "https://github.com/sajjad/project2-client",
+      "server": "https://github.com/sajjad/project2-server"
+    },
+    "live": "https://project2.vercel.app",
+    "technologies": [
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "Situation why boy of fund.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Police subject town forward call."
+      },
+      {
+        "name": "Feature B",
+        "description": "Continue quite would."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Society behind president industry serious."
+      }
+    ],
+    "description": "Military senior suggest light. Development then option money few care treatment actually.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project2-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Green worry special really."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project2-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Professor late attack technology next instead."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 42
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 11
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 19
+      }
+    ],
+    "projectTime": {
+      "start": "2024-08-03",
+      "end": "2025-06-02",
+      "duration": "10 month(s) 3 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Jessica Sullivan MD",
+        "email": "codybrady@yahoo.com",
+        "message": "On too least speak."
+      },
+      {
+        "name": "Tyler Smith",
+        "email": "tchavez@powell.info",
+        "message": "Cup thought tell cause notice assume establish not."
+      }
+    ]
+  },
+  {
+    "name": "Secured well-modulated functionalities Project 3",
+    "type": "Team",
+    "status": "Completed",
+    "shortVideo": "/videos/project3.mp4",
+    "isVideo": true,
+    "isFigma": false,
+    "level": "Professional",
+    "picture": "https://i.ibb.co/h19snwYj/pic-3.png",
+    "logo": "/logos/project3.svg",
+    "figma": "https://figma.com/file/1c5b9004-6c32-4cb0-ad72-0d563ee1d491",
+    "repo": {
+      "parent": "https://github.com/sajjad/project3",
+      "client": "https://github.com/sajjad/project3-client",
+      "server": "https://github.com/sajjad/project3-server"
+    },
+    "live": "https://project3.vercel.app",
+    "technologies": [
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      },
+      {
+        "name": "React.js",
+        "url": "https://react.dev",
+        "icon": "/icons/react.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Zustand",
+        "url": "https://zustand-demo.pmnd.rs",
+        "icon": "/icons/zustand.svg"
+      }
+    ],
+    "creatingJourney": "Interesting everybody day pay. Drug smile just carry two example.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Father size and both local score."
+      },
+      {
+        "name": "Feature B",
+        "description": "Wear prove company career hospital today."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "General minute put."
+      }
+    ],
+    "description": "If difficult approach impact star. Sometimes state shake little.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project3-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Upon eat issue region name who this."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project3-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Bar expert none answer affect too tend base."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 32
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 14
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 15
+      }
+    ],
+    "projectTime": {
+      "start": "2025-02-05",
+      "end": "2025-05-22",
+      "duration": "3 month(s) 16 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Kimberly Sims",
+        "email": "knash@gmail.com",
+        "message": "Mission bill where."
+      },
+      {
+        "name": "Thomas Smith",
+        "email": "castrocrystal@yahoo.com",
+        "message": "Wife politics young method."
+      }
+    ]
+  },
+  {
+    "name": "Public-key neutral neural-net Project 4",
+    "type": "Solo",
+    "status": "In Progress",
+    "shortVideo": "/videos/project4.mp4",
+    "isVideo": true,
+    "isFigma": false,
+    "level": "Intermediate",
+    "picture": "https://i.ibb.co/84jbdwFf/pic-4.png",
+    "logo": "/logos/project4.svg",
+    "figma": "https://figma.com/file/79d70ef5-58b6-4b78-b5d2-bfb7e796224c",
+    "repo": {
+      "parent": "https://github.com/sajjad/project4",
+      "client": "https://github.com/sajjad/project4-client",
+      "server": "https://github.com/sajjad/project4-server"
+    },
+    "live": "https://project4.vercel.app",
+    "technologies": [
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      },
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "React.js",
+        "url": "https://react.dev",
+        "icon": "/icons/react.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "To film director air painting. Six music base southern these up water.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Reality finally administration."
+      },
+      {
+        "name": "Feature B",
+        "description": "Bad represent defense your station."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Relate push southern movie all."
+      }
+    ],
+    "description": "Between bag focus toward. Off dog break after. Series Democrat determine society both why.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project4-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Four term girl idea parent follow left."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project4-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Central deep present reveal bank lay chair."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 16
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 9
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 8
+      }
+    ],
+    "projectTime": {
+      "start": "2024-10-18",
+      "end": "2025-07-25",
+      "duration": "9 month(s) 10 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Jordan Wilson",
+        "email": "bellashley@gmail.com",
+        "message": "Gun knowledge cause apply even together go."
+      },
+      {
+        "name": "Jennifer Perez",
+        "email": "jimmyproctor@maldonado-wells.biz",
+        "message": "How weight long."
+      }
+    ]
+  },
+  {
+    "name": "Ameliorated dynamic pricing structure Project 5",
+    "type": "Solo",
+    "status": "Completed",
+    "shortVideo": "/videos/project5.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Intermediate",
+    "picture": "https://i.ibb.co/MxNZ9TPN/pic-5.png",
+    "logo": "/logos/project5.svg",
+    "figma": "https://figma.com/file/6d7b7ae8-d234-44cf-9935-8fcecb6c27ce",
+    "repo": {
+      "parent": "https://github.com/sajjad/project5",
+      "client": "https://github.com/sajjad/project5-client",
+      "server": "https://github.com/sajjad/project5-server"
+    },
+    "live": "https://project5.vercel.app",
+    "technologies": [
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "Gas quickly similar at role. Smile else cut blue evening ground born service.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Himself spend federal fast yard physical admit book."
+      },
+      {
+        "name": "Feature B",
+        "description": "Job avoid seven less."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Challenge common full arm."
+      }
+    ],
+    "description": "Culture top hope poor. Ever summer enter where town.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project5-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Community ago more table thought money."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project5-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Many woman executive."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 28
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 20
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 10
+      }
+    ],
+    "projectTime": {
+      "start": "2025-02-02",
+      "end": "2025-04-12",
+      "duration": "2 month(s) 9 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Chad Figueroa",
+        "email": "christinasullivan@thomas.org",
+        "message": "Teach will this dream science."
+      },
+      {
+        "name": "George Watts",
+        "email": "kathryn32@hotmail.com",
+        "message": "Wish center blue."
+      }
+    ]
+  },
+  {
+    "name": "Multi-layered transitional algorithm Project 6",
+    "type": "Team",
+    "status": "Completed",
+    "shortVideo": "/videos/project6.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Professional",
+    "picture": "/images/project6-cover.jpg",
+    "logo": "https://i.ibb.co/jZVDYcdC/pic-6.png",
+    "figma": "https://figma.com/file/b3bfff92-c545-47a0-aae1-dab648c37633",
+    "repo": {
+      "parent": "https://github.com/sajjad/project6",
+      "client": "https://github.com/sajjad/project6-client",
+      "server": "https://github.com/sajjad/project6-server"
+    },
+    "live": "https://project6.vercel.app",
+    "technologies": [
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Zustand",
+        "url": "https://zustand-demo.pmnd.rs",
+        "icon": "/icons/zustand.svg"
+      }
+    ],
+    "creatingJourney": "Information might order method shoulder mean war ready. Suddenly bar next call case others.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Young eight bag song picture."
+      },
+      {
+        "name": "Feature B",
+        "description": "Law authority one rock article institution."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Quite house better truth executive care from movement."
+      }
+    ],
+    "description": "Physical late represent today feeling.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project6-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Suddenly give face carry occur."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project6-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Pick event hand stuff partner the."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 15
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 23
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 9
+      }
+    ],
+    "projectTime": {
+      "start": "2025-03-26",
+      "end": "2025-03-28",
+      "duration": "0 month(s) 2 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Wendy Wilson",
+        "email": "darrellwhite@duran.com",
+        "message": "Wear nation during author."
+      },
+      {
+        "name": "Debra Lutz",
+        "email": "thomas05@hunter.com",
+        "message": "Arm during animal western heavy."
+      }
+    ]
+  },
+  {
+    "name": "Secured 3rdgeneration middleware Project 7",
+    "type": "Solo",
+    "status": "Completed",
+    "shortVideo": "/videos/project7.mp4",
+    "isVideo": true,
+    "isFigma": false,
+    "level": "Intermediate",
+    "picture": "https://i.ibb.co/tp73sPny/pic-7.png",
+    "logo": "/logos/project7.svg",
+    "figma": "https://figma.com/file/edd762a2-3886-4936-9dc1-14f101dcda51",
+    "repo": {
+      "parent": "https://github.com/sajjad/project7",
+      "client": "https://github.com/sajjad/project7-client",
+      "server": "https://github.com/sajjad/project7-server"
+    },
+    "live": "https://project7.vercel.app",
+    "technologies": [
+      {
+        "name": "MongoDB",
+        "url": "https://mongodb.com",
+        "icon": "/icons/mongodb.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Zustand",
+        "url": "https://zustand-demo.pmnd.rs",
+        "icon": "/icons/zustand.svg"
+      }
+    ],
+    "creatingJourney": "Control key out partner.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Computer interesting from too security who."
+      },
+      {
+        "name": "Feature B",
+        "description": "Trouble because no trip."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Less deep where receive number represent."
+      }
+    ],
+    "description": "Word person main bring successful base investment. Meet agent another leg opportunity election white.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project7-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Like media international century away strong."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project7-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Later walk store."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 28
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 18
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 6
+      }
+    ],
+    "projectTime": {
+      "start": "2025-06-19",
+      "end": "2025-07-13",
+      "duration": "0 month(s) 24 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Francisco Murphy",
+        "email": "jacquelinechandler@yahoo.com",
+        "message": "Moment increase lay design their."
+      },
+      {
+        "name": "Patrick Oconnor",
+        "email": "imelendez@sheppard.com",
+        "message": "Nice effect white size letter born he."
+      }
+    ]
+  },
+  {
+    "name": "Down-sized scalable matrices Project 8",
+    "type": "Team",
+    "status": "Completed",
+    "shortVideo": "/videos/project8.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Professional",
+    "picture": "https://i.ibb.co/4wwbZL5T/pic-8.png",
+    "logo": "/logos/project8.svg",
+    "figma": "https://figma.com/file/d43f2631-34e3-4304-abc9-d356af698c49",
+    "repo": {
+      "parent": "https://github.com/sajjad/project8",
+      "client": "https://github.com/sajjad/project8-client",
+      "server": "https://github.com/sajjad/project8-server"
+    },
+    "live": "https://project8.vercel.app",
+    "technologies": [
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      },
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "React.js",
+        "url": "https://react.dev",
+        "icon": "/icons/react.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "Appear particularly walk life then. Man loss school hard should door piece.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Which population defense than paper shoulder challenge."
+      },
+      {
+        "name": "Feature B",
+        "description": "Receive we wear great instead grow question support."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Already certain well act tough both seem."
+      }
+    ],
+    "description": "Fight really reason again.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project8-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Against down rate."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project8-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "People add home help."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 47
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 7
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 13
+      }
+    ],
+    "projectTime": {
+      "start": "2024-10-20",
+      "end": "2024-10-23",
+      "duration": "0 month(s) 3 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Kathy Mathis",
+        "email": "amanda37@hanson.com",
+        "message": "Others she fine half message."
+      },
+      {
+        "name": "Jonathan Lewis",
+        "email": "matthew66@gmail.com",
+        "message": "Attorney order month kind another real return too."
+      }
+    ]
+  },
+  {
+    "name": "Monitored scalable support Project 9",
+    "type": "Solo",
+    "status": "Completed",
+    "shortVideo": "/videos/project9.mp4",
+    "isVideo": true,
+    "isFigma": false,
+    "level": "Professional",
+    "picture": "https://i.ibb.co/Y7Cw913C/pic-9.png",
+    "logo": "/logos/project9.svg",
+    "figma": "https://figma.com/file/045d42ef-1ba7-4c18-8c79-c2a5d64f2354",
+    "repo": {
+      "parent": "https://github.com/sajjad/project9",
+      "client": "https://github.com/sajjad/project9-client",
+      "server": "https://github.com/sajjad/project9-server"
+    },
+    "live": "https://project9.vercel.app",
+    "technologies": [
+      {
+        "name": "Node.js",
+        "url": "https://nodejs.org",
+        "icon": "/icons/node.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Zustand",
+        "url": "https://zustand-demo.pmnd.rs",
+        "icon": "/icons/zustand.svg"
+      }
+    ],
+    "creatingJourney": "Car anything half across threat. See tend see turn.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Affect piece north improve develop."
+      },
+      {
+        "name": "Feature B",
+        "description": "Ball worker until year citizen cell available call."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Pay owner their front commercial know."
+      }
+    ],
+    "description": "National on however fill. You heart majority.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project9-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Hear central bed teach."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project9-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Arm pass item."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 46
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 19
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 12
+      }
+    ],
+    "projectTime": {
+      "start": "2025-04-01",
+      "end": "2025-04-08",
+      "duration": "0 month(s) 7 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Sandra Ross",
+        "email": "charlesodom@hotmail.com",
+        "message": "Population I first during factor."
+      },
+      {
+        "name": "Matthew Summers",
+        "email": "kwallace@gmail.com",
+        "message": "Up force feeling point late."
+      }
+    ]
+  },
+  {
+    "name": "Customizable neutral frame Project 10",
+    "type": "Solo",
+    "status": "Completed",
+    "shortVideo": "/videos/project10.mp4",
+    "isVideo": true,
+    "isFigma": true,
+    "level": "Basic",
+    "picture": "https://i.ibb.co/Mkm7TNzg/pic-10.png",
+    "logo": "/logos/project10.svg",
+    "figma": "https://figma.com/file/d2c638e7-32a0-4278-83e5-ce36ad51ac55",
+    "repo": {
+      "parent": "https://github.com/sajjad/project10",
+      "client": "https://github.com/sajjad/project10-client",
+      "server": "https://github.com/sajjad/project10-server"
+    },
+    "live": "https://project10.vercel.app",
+    "technologies": [
+      {
+        "name": "React.js",
+        "url": "https://react.dev",
+        "icon": "/icons/react.svg"
+      },
+      {
+        "name": "TypeScript",
+        "url": "https://www.typescriptlang.org",
+        "icon": "/icons/ts.svg"
+      },
+      {
+        "name": "Tailwind CSS",
+        "url": "https://tailwindcss.com",
+        "icon": "/icons/tailwind.svg"
+      }
+    ],
+    "newTechnologies": [
+      {
+        "name": "Framer Motion",
+        "url": "https://www.framer.com/motion/",
+        "icon": "/icons/framer.svg"
+      }
+    ],
+    "creatingJourney": "Career himself bring color. When sure enjoy expect appear discussion toward peace.",
+    "features": [
+      {
+        "name": "Feature A",
+        "description": "Husband entire people floor way."
+      },
+      {
+        "name": "Feature B",
+        "description": "Movement rise social decision."
+      }
+    ],
+    "comingFeatures": [
+      {
+        "name": "Feature X",
+        "description": "Also dog we leg mention ok town."
+      }
+    ],
+    "description": "School fish food however try understand share. Let perhaps citizen same may. Put end one ready suggest.",
+    "previews": [
+      {
+        "name": "Preview A",
+        "image": "/images/project10-previewA.jpg",
+        "features": ["Cool UI", "Fast Loading", "Responsive"],
+        "description": "Ten peace agency forward."
+      },
+      {
+        "name": "Preview B",
+        "image": "/images/project10-previewB.jpg",
+        "features": ["Dark Mode", "User Friendly"],
+        "description": "Couple hotel across risk player create take painting."
+      }
+    ],
+    "reactions": [
+      {
+        "name": "Love",
+        "icon": "\u2764\ufe0f",
+        "count": 16
+      },
+      {
+        "name": "Support",
+        "icon": "\ud83e\udd1d",
+        "count": 14
+      },
+      {
+        "name": "Celebrate",
+        "icon": "\ud83c\udf89",
+        "count": 13
+      }
+    ],
+    "projectTime": {
+      "start": "2024-08-26",
+      "end": "2024-10-18",
+      "duration": "1 month(s) 23 days"
+    },
+    "feedbacks": [
+      {
+        "name": "Patrick Johnson",
+        "email": "sdean@gmail.com",
+        "message": "Any officer suggest determine unit threat toward sense."
+      },
+      {
+        "name": "Angela Garcia",
+        "email": "ohamilton@gmail.com",
+        "message": "Attack moment building stay whom in."
+      }
+    ]
+  }
+]

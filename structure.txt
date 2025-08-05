@@ -1,0 +1,100 @@
+// const ProjectDetailsPageStrucure = [
+//   {
+//     shortVideo: '',
+//     picture: '',
+//     logo: '',
+//     figmaFile: '',
+//     name: '',
+//     type: '',
+//     status: '',
+//     repo: {
+//       client: '',
+//       server: '',
+//     },
+//     liveUrl: '',
+//     technologies: [
+//       {
+//         title: '',
+//         url: '',
+//         icon: '',
+//       },
+//     ],
+//     newTechnologies: [
+//       {
+//         title: '',
+//         url: '',
+//         icon: '',
+//       },
+//     ],
+//     creatingJourney: '',
+//     features: [
+//       {
+//         title: '',
+//         description: '',
+//       },
+//     ],
+//     comingFeatures: [
+//       {
+//         title: '',
+//         description: '',
+//       },
+//     ],
+//     description: '',
+//     previews: [
+//       {
+//         title: '',
+//         image: '',
+//         features: [],
+//         description: '',
+//       },
+//       {
+//         title: '',
+//         features: [],
+//         image: '',
+//         description: '',
+//       },
+//     ],
+//     reactions: [
+//       {
+//         name: 'Love',
+//         icon: '❤️',
+//         count: 0,
+//       },
+//       {
+//         // op
+//         name: 'Support',
+//         icon: '🤝',
+//         count: 0,
+//       },
+//       {
+//         // op
+//         name: 'Celebrate',
+//         icon: '🎉',
+//         count: 0,
+//       },
+//     ],
+//     projectTime: {
+//       start: '',
+//       end: '',
+//       duration: '',
+//     },
+//     feedbacks: [
+//       {
+//         name: '',
+//         email: '',
+//         message: '',
+//       },
+//     ],
+//   },
+// ]
+
+
+
+
+
+
+
+
+
+
+

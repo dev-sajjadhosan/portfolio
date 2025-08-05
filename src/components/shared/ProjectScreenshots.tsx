@@ -1,12 +1,19 @@
 import { useState, useRef, useEffect } from 'react'
-import image from '../../assets/project.jpg'
+import image from '../../assets/nopicture.jpg'
+import type { Preview } from '../../../types'
 
-const ProjectScreenshots = () => {
+import { AnimatePresence, motion } from 'motion/react'
+import { TbX } from 'react-icons/tb'
+
+const ProjectScreenshots = ({ previews }: { previews: Preview[] }) => {
+  const [current, setCurrent] = useState<Preview | undefined>()
+
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
+  const [modal, setModal] = useState<boolean>(false)
   const scrollRef = useRef<HTMLDivElement>(null)
 
-  const closeModal = () => setSelectedIndex(null)
+  const closeModal = () => setModal(!modal)
 
   // 🧠 Enable vertical mouse wheel to scroll horizontally
   useEffect(() => {
@@ -31,23 +38,30 @@ const ProjectScreenshots = () => {
       {/* SCROLLABLE CARDS */}
       <div
         ref={scrollRef}
-        className="mt-1.5 flex items-center gap-9 overflow-x-scroll w-full h-[20rem] scroll-smooth"
+        className="mt-1.5 flex items-center gap-11 overflow-x-scroll w-full h-[20rem] scroll-smooth px-11"
       >
-        {[...Array(7)].map((_, index) => (
-          <div
-            key={index}
-            onMouseEnter={() => setHoveredIndex(index)}
+        {previews?.map((p: Preview, i: number) => (
+          <motion.div
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 * i, duration: 0.7 }}
+            key={i}
+            onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
-            onClick={() => setSelectedIndex(index)}
+            onClick={() => {
+              setSelectedIndex(i)
+              setCurrent(p)
+              setModal(!modal)
+            }}
             className="flex flex-col items-center shrink-0 whitespace-break-spaces transition-all duration-150 cursor-pointer"
           >
             <img
-              src={image}
-              width={330}
-              alt=""
-              className={`rounded-lg transition-all duration-300
+              src={p?.picture ?? image}
+              // width={230}
+              alt={p?.name}
+              className={`rounded-lg transition-all duration-300 w-[15rem]
                 ${
-                  hoveredIndex === index
+                  hoveredIndex === i
                     ? 'scale-120 z-10'
                     : hoveredIndex === null
                     ? 'scale-100'
@@ -56,53 +70,62 @@ const ProjectScreenshots = () => {
             />
             <p
               className={`text-md text-gray-300 mt-1.5 transition-opacity duration-300 ${
-                hoveredIndex === index && 'opacity-0'
+                hoveredIndex === i && 'opacity-0'
               }`}
             >
-              Home Page
+              {p?.name}
             </p>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* MODAL OVERLAY */}
-      {selectedIndex !== null && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
-          onClick={closeModal}
-        >
-          <div
-            className="relative bg-base-300 p-5 rounded-xl shadow-xl max-w-5xl w-full transition-all duration-300"
-            onClick={(e) => e.stopPropagation()}
+      <AnimatePresence mode="wait">
+        {modal && (
+          <motion.div
+            key={selectedIndex}
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.5 }}
+            className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50"
+            onClick={closeModal}
           >
-            <button
-              onClick={closeModal}
-              className="absolute top-3 right-5 btn btn-sm btn-error btn-soft"
+            <div
+              className="relative bg-base-300 p-7 rounded-xl shadow-xl max-w-5xl w-11/12 transition-all duration-300"
+              onClick={(e) => e.stopPropagation()}
             >
-              close
-            </button>
-            <div className="flex items-center gap-7 flex-wrap">
-              <img
-                src={image}
-                alt="Preview"
-                width={600}
-                className="rounded-lg object-contain"
-              />
-              <div className="card">
-                <h1 className="text-2xl">Picture - Home Page</h1>
-                <h3 className="text-lg mt-1.5">Everything about this page</h3>
-                <ul className="list-disc ml-5 mt-2 text-base text-gray-200">
-                  <li>Create new product</li>
-                  <li>Create new product</li>
-                  <li>Create new product</li>
-                  <li>Create new product</li>
-                  <li>Create new product</li>
-                </ul>
+              <button
+                onClick={closeModal}
+                className="absolute top-3 right-5 btn btn-sm btn-primary btn-soft"
+              >
+                <TbX size={17} />
+                Close
+              </button>
+              <div className="flex items-center gap-7 flex-wrap">
+                <img
+                  src={current?.picture ?? image}
+                  alt={current?.name}
+                  // width={400}
+                  className="rounded-lg object-contain w-[23rem]"
+                />
+                <div className="card">
+                  <h1 className="text-2xl">Picture - {current?.name}</h1>
+                  <p className="text-xs tracking-wide">
+                    {current?.description}
+                  </p>
+                  <h3 className="text-lg mt-1.5">Everything about this page</h3>
+                  <ul className="list-disc ml-5 mt-2 text-base text-gray-200">
+                    {current?.features.map((f, i) => (
+                      <li key={i}>{f}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
