@@ -44,7 +44,7 @@ const ToolCard = ({
         >
           {data[index]?.tools?.map(
             (
-              l: { img: string; size?: number; title: string; url: string },
+              l: { img?: string; size?: number; title?: string; url?: string; id?: number },
               i: number,
             ) => (
               <motion.div
@@ -66,7 +66,7 @@ const ToolCard = ({
                     {i + 1 <= 9 ? '0' + (i + 1) : i + 1}
                   </h1>
                   <Link
-                    to={l.url}
+                    to={l.url ?? '#'}
                     className="btn btn-sm btn-primary btn-soft ml-auto"
                   >
                     <TbBomb size={17} />
@@ -75,13 +75,13 @@ const ToolCard = ({
                 </div>
                 <div className="mx-auto text-center">
                   <img
-                    src={l?.img}
-                    alt={l?.title}
+                    src={l?.img ?? ''}
+                    alt={l?.title ?? ''}
                     width={l?.size ?? 150}
                     className="mx-auto"
                   />
                   <h3 className="text-5xl font-normal capitalize">
-                    {l?.title}
+                    {l?.title ?? ''}
                   </h3>
                   <span className="badge badge-info badge-soft capitalize mt-2">
                     {filter}
