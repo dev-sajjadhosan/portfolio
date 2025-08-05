@@ -12,7 +12,7 @@ import {
 import image from '../../assets/user.png'
 // import Button from '../../components/ui/Button'
 import { Link } from 'react-router-dom'
-import { color, motion } from 'motion/react'
+import { motion } from 'motion/react'
 import ShareModal from '../../components/Share/Share'
 import HelmetTitle from '../../components/shared/HelmeTitle'
 import { useState } from 'react'

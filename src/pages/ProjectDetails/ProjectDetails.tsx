@@ -230,17 +230,17 @@ const ProjectDetails = () => {
               </motion.h3>
               <div className="mt-1.5 flex flex-wrap gap-5">
                 {data?.technologies.map((t, i) => (
-                  <Link to={t?.url} key={i}>
-                    <motion.li
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 * i, duration: 0.7 }}
-                      className="badge badge-primary badge-soft text-xs rounded px-5 tracking-wide"
-                    >
-                      {/* {t?.icon} */}
-                      {t?.name}
-                    </motion.li>
-                  </Link>
+                  // <Link to={t} key={i}>
+                  <motion.li
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 * i, duration: 0.7 }}
+                    className="badge badge-primary badge-soft text-xs rounded px-5 tracking-wide"
+                  >
+                    {/* {t?.icon} */}
+                    {t}
+                  </motion.li>
+                  // </Link>
                 ))}
               </div>
             </div>
@@ -255,7 +255,7 @@ const ProjectDetails = () => {
               </motion.h3>
               <div className="mt-1.5 flex flex-wrap gap-5">
                 {data?.newTechnologies.map((t, i) => (
-                  <Link to={t?.url} key={i}>
+                  // <Link to={t?.url} key={i}>
                     <motion.li
                       initial={{ opacity: 0, y: -50 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -263,9 +263,9 @@ const ProjectDetails = () => {
                       className="badge badge-info badge-soft text-xs rounded px-5 tracking-wide"
                     >
                       {/* {t?.icon} */}
-                      {t?.name}
+                      {t}
                     </motion.li>
-                  </Link>
+                  // </Link>
                 ))}
               </div>
             </div>

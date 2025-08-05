@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import image from '../../assets/nopicture.jpg'
+// import image from '../../assets/nopicture.jpg'
 import type { Preview } from '../../../types'
 
 import { AnimatePresence, motion } from 'motion/react'
@@ -56,7 +56,7 @@ const ProjectScreenshots = ({ previews }: { previews: Preview[] }) => {
             className="flex flex-col items-center shrink-0 whitespace-break-spaces transition-all duration-150 cursor-pointer"
           >
             <img
-              src={p?.picture ?? image}
+              // src={p?.picture || image} i have to solve the type error
               // width={230}
               alt={p?.name}
               className={`rounded-lg transition-all duration-300 w-[15rem]
@@ -104,7 +104,7 @@ const ProjectScreenshots = ({ previews }: { previews: Preview[] }) => {
               </button>
               <div className="flex items-center gap-7 flex-wrap">
                 <img
-                  src={current?.picture ?? image}
+                  // src={current?.picture ?? image} i have to solve the type error
                   alt={current?.name}
                   // width={400}
                   className="rounded-lg object-contain w-[23rem]"
