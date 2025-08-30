@@ -2,40 +2,49 @@ import {
   TbBellShare,
   TbExternalLink,
   TbLocationShare,
-  TbPlayerPlayFilled,
+  // TbPlayerPlayFilled,
   TbUsersGroup,
 } from 'react-icons/tb'
 import BackBtn from '../../components/shared/BackBtn'
 import { AnimatePresence, motion } from 'motion/react'
 import { VscRepo } from 'react-icons/vsc'
-import ProjectScreenshots from '../../components/shared/ProjectScreenshots'
+// import ProjectScreenshots from '../../components/shared/ProjectScreenshots'
 import Footer from '../../components/shared/Footer'
 import HelmetTitle from '../../components/shared/HelmeTitle'
 import { useEffect, useState } from 'react'
-import useAxios from '../../hooks/useAxios'
+// import useAxios from '../../hooks/useAxios'
 import { Link, useParams } from 'react-router-dom'
 import type { ProjectDocument } from '../../../types'
 import image from '../../assets/cooking.png'
 
 const ProjectDetails = () => {
-  const { axiosUrl } = useAxios()
+  // const { axiosUrl } = useAxios()
   const { id } = useParams()
 
-  const [figmaBox, setFigmaBox] = useState(false)
-  const [videoBox, setVideoBox] = useState(false)
+  // const [figmaBox, setFigmaBox] = useState(false)
+  const [videoBox] = useState(false)
   const [data, setData] = useState<ProjectDocument | null>(null)
 
+  // useEffect(() => {
+  //   axiosUrl
+  //     .get(`/project/${id}`, {
+  //       headers: {
+  //         'x-private-key': import.meta.env.VITE_PRIVATE,
+  //       },
+  //     })
+  //     .then((re) => {
+  //       setData(re.data)
+  //     })
+  // }, [id, axiosUrl])
+
   useEffect(() => {
-    axiosUrl
-      .get(`/project/${id}`, {
-        headers: {
-          'x-private-key': import.meta.env.VITE_PRIVATE,
-        },
+    fetch('/myData.json')
+      .then((res) => res.json())
+      .then((data) => {
+        const project = data.find((p: ProjectDocument) => p.name === id)
+        setData(project)
       })
-      .then((re) => {
-        setData(re.data)
-      })
-  }, [id, axiosUrl])
+  }, [id])
 
   return (
     <>
@@ -44,7 +53,7 @@ const ProjectDetails = () => {
         <div className="flex items-center justify-between mb-7">
           <BackBtn type="default" />
           <div className="flex items-center gap-3">
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
@@ -58,7 +67,7 @@ const ProjectDetails = () => {
                 onClick={() => setFigmaBox(!figmaBox)}
               />
               <label className="">Figma</label>
-            </motion.div>
+            </motion.div> */}
             <motion.button
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -109,7 +118,7 @@ const ProjectDetails = () => {
               >
                 #Project 01
               </motion.h3>
-              <motion.button
+              {/* <motion.button
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.2, duration: 0.7 }}
@@ -119,17 +128,17 @@ const ProjectDetails = () => {
                 onClick={() => setVideoBox(!videoBox)}
               >
                 <TbPlayerPlayFilled size={17} />
-              </motion.button>
+              </motion.button> */}
             </div>
             <div className="flex items-center gap-1.5">
-              <motion.span
+              {/* <motion.span
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.5, duration: 0.7 }}
                 className="badge badge-primary badge-soft text-xs rounded"
               >
                 {data?.level}
-              </motion.span>
+              </motion.span> */}
               <motion.button
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -238,13 +247,13 @@ const ProjectDetails = () => {
                     className="badge badge-primary badge-soft text-xs rounded px-5 tracking-wide"
                   >
                     {/* {t?.icon} */}
-                    {t}
+                    {t.name}
                   </motion.li>
                   // </Link>
                 ))}
               </div>
             </div>
-            <div>
+            {/* <div>
               <motion.h3
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -255,20 +264,20 @@ const ProjectDetails = () => {
               </motion.h3>
               <div className="mt-1.5 flex flex-wrap gap-5">
                 {data?.newTechnologies.map((t, i) => (
-                  // <Link to={t?.url} key={i}>
-                    <motion.li
-                      initial={{ opacity: 0, y: -50 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.3 * i, duration: 0.7 }}
-                      className="badge badge-info badge-soft text-xs rounded px-5 tracking-wide"
-                    >
-                      {/* {t?.icon} */}
-                      {t}
-                    </motion.li>
-                  // </Link>
+                  <Link to={t?.url} key={i}>
+                  <motion.li
+                    initial={{ opacity: 0, y: -50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.3 * i, duration: 0.7 }}
+                    className="badge badge-info badge-soft text-xs rounded px-5 tracking-wide"
+                  >
+                    {t?.icon}
+                    {t}
+                  </motion.li>
+                  </Link>
                 ))}
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="mt-11 card">
             <motion.h3
@@ -280,27 +289,15 @@ const ProjectDetails = () => {
               Creation Journey of
               <span className="font-semibold italic">{data?.name}</span>
             </motion.h3>
-            <motion.p
+            {/* <motion.p
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.7 }}
               className="mt-1 font-md tracking-wide text-gray-400"
             >
               {data?.creatingJourney}
-              {/* It all started when I was switching between like 5 different anime
-              and movie sites — all of them were either super slow, had ads
-              everywhere, or just looked outdated. That’s when I thought:
-              <q className="text-lg text-info italic">
-                <br />
-                <br />
-                "Why not build my own streaming platform — fast, clean, and
-                aesthetic — tailored for anime + movies lovers like me?"
-                <br />
-                <br />
-              </q>
-              I named it CineOtaku, blending “Cinema” + “Otaku” — two of my
-              favorite things in life. 🎥🍜 */}
-            </motion.p>
+            
+            </motion.p> */}
             <div className="mt-11 grid grid-cols-2 gap-5">
               <div>
                 <motion.h3
@@ -332,7 +329,7 @@ const ProjectDetails = () => {
                   ))}
                 </ul>
               </div>
-              <div>
+              {/* <div>
                 <h3 className="text-lg font-normal">Coming Features:</h3>
                 <ul className="list gap-2 mt-1.5 pl-5">
                   {data?.comingFeatures?.map((cf, i) => (
@@ -354,7 +351,7 @@ const ProjectDetails = () => {
                     </motion.li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="mt-11">
@@ -375,7 +372,7 @@ const ProjectDetails = () => {
               {data?.description}
             </motion.p>
           </div>
-          <div className="my-11 w-full">
+          {/* <div className="my-11 w-full">
             <motion.h3
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -387,7 +384,7 @@ const ProjectDetails = () => {
             <div>
               <ProjectScreenshots previews={data?.previews ?? []} />
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.div>
       <Footer />

@@ -1,10 +1,10 @@
 import { motion } from 'framer-motion'
 import {
-  TbBellShare,
-  TbClick,
+  // TbBellShare,
+  // TbClick,
   TbExternalLink,
-  TbLocationShare,
-  TbTextCaption,
+  // TbLocationShare,
+  // TbTextCaption,
 } from 'react-icons/tb'
 import image from '../../assets/cooking.png'
 import { VscRepo } from 'react-icons/vsc'
@@ -68,7 +68,7 @@ const ProjectView = ({
               transition={{ delay: 0.3, duration: 0.5 }}
               className="avatar w-4/5 rounded-xl"
             />
-            <motion.button
+            {/* <motion.button
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.4 }}
@@ -77,7 +77,7 @@ const ProjectView = ({
             >
               <TbClick size={17} />
               Play
-            </motion.button>
+            </motion.button> */}
           </div>
         )}
         {(isCard === 'only context' ||
@@ -96,9 +96,9 @@ const ProjectView = ({
               <span className="text-primary font-semibold">#Project</span>
               <div className="flex items-center gap-1.5">
                 <span className="badge badge-primary badge-soft text-xs rounded">
-                  {data?.level}
+                  {data?.type}
                 </span>
-                <motion.button
+                {/* <motion.button
                   className="btn btn-sm btn-ghost btn-primary tooltip"
                   data-tip="Share"
                   onClick={() =>
@@ -123,7 +123,7 @@ const ProjectView = ({
                   }
                 >
                   <TbBellShare size={17} />
-                </motion.button>
+                </motion.button> */}
               </div>
             </div>
 
@@ -135,17 +135,17 @@ const ProjectView = ({
                 </motion.button>
               </Link>
               <Link to={data?.live}>
-                <motion.button className="btn btn-primary btn-ghost btn-sm lg:btn-md">
+                <motion.button className="btn btn-primary btn-sm lg:btn-md">
                   <TbExternalLink size={17} />
                   View Live
                 </motion.button>
               </Link>
-              <Link to={`/view/${data?._id}`}>
+              {/* <Link to={`/view/${data?.name}`}>
                 <motion.button className="btn btn-primary btn-sm lg:btn-md">
                   <TbTextCaption size={17} />
                   View Information
                 </motion.button>
-              </Link>
+              </Link> */}
             </div>
 
             <div className="flex flex-col gap-1">

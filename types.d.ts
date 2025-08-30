@@ -14,16 +14,16 @@ type ProjectType = {
   picture: string
   video: string
   isVideo: boolean
-  level: string
+  type: string
   live: string
   description: string
 }
 
-interface Technology {
-  name: string
-  icon: string
-  url: string
-}
+// interface Technology {
+//   name: string
+//   icon: string
+//   url: string
+// }
 
 interface Feature {
   name: string
@@ -37,17 +37,17 @@ interface Preview {
   description: string
 }
 
-interface Reaction {
-  name: string
-  icon: string
-  count: number
-}
+// interface Reaction {
+//   name: string
+//   icon: string
+//   count: number
+// }
 
-interface Feedback {
-  name: string
-  email: string
-  message: string
-}
+// interface Feedback {
+//   name: string
+//   email: string
+//   message: string
+// }
 
 interface Timeline {
   start: string
@@ -56,33 +56,25 @@ interface Timeline {
 }
 
 interface ProjectDocument {
-  _id: string | number
   name: string
   type: string
   status: string
-  shortVideo: string
-  isVideo: boolean
-  isFigma: boolean
-  level: string
   picture: string
   logo: string
-  figma: string
   repo: {
     parent?: string
     client?: string
     server?: string
   }
   live: string
-  technologies: string[]
-  newTechnologies: string[]
-  creatingJourney: string
+  technologies: [
+    {
+      name: string
+    },
+  ]
   features: Feature[]
-  comingFeatures: Feature[]
   description: string
-  previews: Preview[]
-  reactions: Reaction[]
-  timeline: Timeline
-  feedbacks: Feedback[]
+  projectTime: Timeline
 }
 
 interface alertDoc {
