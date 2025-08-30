@@ -45,7 +45,7 @@ const socialLinks = [
   },
   {
     icon: <TbMailPin size={19} />,
-    url: '',
+    url: 'mailto:yourname@example.com?subject=Hello Sajjad&body=I%20saw%20your%20portfolio%20and%20would%20like%20to%20get%20in%20touch.  ',
     tooltip: 'E-Mail',
     title: 'E-Mail',
   },

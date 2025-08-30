@@ -36,7 +36,7 @@ const socialLinks = [
   },
   {
     icon: <TbMailPin size={19} />,
-    url: '',
+    url: 'mailto:devsajjadhosan@gmail.com?subject=Hire%20Me&body=Hi%20Sajjad, I found your portfolio and would like to discuss a project.',
     tooltip: 'E-Mail',
     title: 'E-Mail',
   },

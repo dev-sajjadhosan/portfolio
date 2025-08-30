@@ -12,8 +12,6 @@ import { motion } from 'motion/react'
 import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const AboutDev = () => {
- 
-
   return (
     <>
       <HelmetTitle title="About - Portfolio" />
@@ -26,15 +24,17 @@ const AboutDev = () => {
         >
           <BackBtn type="default" />
           <div className="flex items-center gap-3">
-            <motion.button
-              initial={{ y: -50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.7 }}
-              className="btn btn-sm btn-primary btn-soft px-5"
-            >
-              <TbUserStar size={17} />
-              Hire ME
-            </motion.button>
+            <Link to={'https://www.linkedin.com/in/devsajjadhosan'}>
+              <motion.button
+                initial={{ y: -50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.7 }}
+                className="btn btn-sm btn-primary btn-soft px-5"
+              >
+                <TbUserStar size={17} />
+                Hire ME
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
         <div className="text-primary max-w-5xl mx-auto">
@@ -151,34 +151,46 @@ const AboutDev = () => {
               </li>
             </motion.ul>
             <div className="mt-7 space-x-7">
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.1, duration: 0.7 }}
-                className="btn btn-primary btn-soft"
-              >
-                <TbPhoneCall size={17} />
-                Let's talk
-              </motion.button>
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.3, duration: 0.7 }}
-                className="btn btn-primary btn-soft"
-              >
-                <TbLayoutGridAdd size={17} />
-                Let's create project
-              </motion.button>
-              <motion.button
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ delay: 0.5, duration: 0.7 }}
-                className="btn btn-primary"
-              >
-                <TbVideoPlus size={17} />
-                Meet me
-              </motion.button>
+              {/* Talk → Discord */}
+              <Link to={'https://discord.gg/1253622802448257044'}>
+                <motion.button
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.1, duration: 0.7 }}
+                  className="btn btn-primary btn-soft"
+                >
+                  <TbPhoneCall size={17} />
+                  Let's Talk
+                </motion.button>
+              </Link>
+
+              {/* Create Project → Contact Form / Hire Page */}
+              <Link to={'/contact'}>
+                <motion.button
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.3, duration: 0.7 }}
+                  className="btn btn-primary btn-soft"
+                >
+                  <TbLayoutGridAdd size={17} />
+                  Let's Create Project
+                </motion.button>
+              </Link>
+
+              {/* Meet Me → Calendly / Google Meet */}
+              <Link to={'https://calendly.com/devsajjadhosan'}>
+                <motion.button
+                  initial={{ y: 50, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.5, duration: 0.7 }}
+                  className="btn btn-primary"
+                >
+                  <TbVideoPlus size={17} />
+                  Meet Me
+                </motion.button>
+              </Link>
             </div>
+
             <ul className="flex flex-col mt-11 text-gray-400">
               <motion.p
                 initial={{ y: 50, opacity: 0 }}
