@@ -1,7 +1,7 @@
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'
 import Socials from '../../components/shared/Socials'
 import BackBtn from '../../components/shared/BackBtn'
-import { TbMailCheck, TbQrcode, TbScanEye, TbUserStar } from 'react-icons/tb'
+import { TbMailCheck, TbQrcode, TbScanEye } from 'react-icons/tb'
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useForm } from 'react-hook-form'
