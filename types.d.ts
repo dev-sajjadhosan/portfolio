@@ -85,4 +85,9 @@ interface ProjectDocument {
   feedbacks: Feedback[]
 }
 
-export { Skill, ProjectType, ProjectDocument, Preview }
+interface alertDoc {
+  success: boolean
+  message: string
+}
+
+export { Skill, ProjectType, ProjectDocument, Preview, alertDoc }

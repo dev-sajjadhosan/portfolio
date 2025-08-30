@@ -3,13 +3,10 @@ import useAuth from '../../hooks/useAuth'
 import type { Skill } from '../../../types'
 const skills = [
   { id: 1, name: 'all', type: 'all' },
-  { id: 2, name: 'html5', type: 'frontend' },
-  { id: 3, name: 'css3', type: 'frontend' },
   { id: 4, name: 'javascript', type: 'frontend' },
   { id: 5, name: 'typescript', type: 'frontend' },
   { id: 6, name: 'react', type: 'frontend' },
-  { id: 7, name: 'webSocket', type: 'backend' },
-  { id: 8, name: 'electron', type: 'desktop' },
+  { id: 8, name: 'application', type: 'desktop' },
   { id: 9, name: 'ai', type: 'ai' },
   { id: 10, name: 'private', type: 'private' },
   { id: 11, name: 'server', type: 'server' },

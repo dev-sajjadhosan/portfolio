@@ -6,7 +6,7 @@ import {
   TbLocationShare,
   TbTextCaption,
 } from 'react-icons/tb'
-import image from '../../assets/project.jpg'
+import image from '../../assets/cooking.png'
 import { VscRepo } from 'react-icons/vsc'
 import ShareModal from '../Share/Share'
 import useAuth from '../../hooks/useAuth'
@@ -93,7 +93,7 @@ const ProjectView = ({
             } mt-5 md:mt-0`}
           >
             <div className="flex justify-between items-center">
-              <span className="text-primary font-semibold">#Project 01</span>
+              <span className="text-primary font-semibold">#Project</span>
               <div className="flex items-center gap-1.5">
                 <span className="badge badge-primary badge-soft text-xs rounded">
                   {data?.level}

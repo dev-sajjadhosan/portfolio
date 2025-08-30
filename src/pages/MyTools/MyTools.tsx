@@ -433,7 +433,7 @@ const mycomingTools = [
 
 const MyToolsPage = () => {
   const { isToolDefault, setIsToolsDefault } = useAuth()
-  const [tab, seTab] = useState(true)
+  const [tab, seTab] = useState(false)
 
   return (
     <>
@@ -475,8 +475,8 @@ const MyToolsPage = () => {
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.7 }}
-              className={`btn btn-sm btn-primary  ${
-                tab === false ? 'btn-soft' : ''
+              className={`btn btn-sm  ${
+                tab === false ? 'btn-primary' : 'btn-soft'
               }`}
               onClick={() => seTab(!tab)}
             >
@@ -488,7 +488,7 @@ const MyToolsPage = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.8, duration: 0.7 }}
               className={`btn btn-sm btn-primary  ${
-                tab === true ? 'btn-soft' : ''
+                tab === true ? 'btn-primary' : 'btn-soft'
               }`}
               onClick={() => seTab(!tab)}
             >

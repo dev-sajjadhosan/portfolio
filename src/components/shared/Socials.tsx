@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 const socialLinks = [
   {
     icon: <TbBrandLinkedin size={19} />,
-    url: ' ',
+    url: 'https://www.linkedin.com/in/devsajjadhosan',
     tooltip: 'Linkedin',
     title: 'Linkedin',
   },

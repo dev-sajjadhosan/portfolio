@@ -1,0 +1,385 @@
+[
+  {
+    "name": "CineOtaku",
+    "type": "Solo",
+    "status": "Completed",
+    "picture": "/src/assets/projectResource/cineOtaku_h.png",
+    "logo": "/src/assets/projectResource/cineOtaku.png",
+    "repo": {
+      "parent": "https://github.com/dev-sajjadhosan/CineOtaku",
+      "client": "https://github.com/dev-sajjadhosan/CineOtaku/tree/main/frontend",
+      "server": "/"
+    },
+    "live": "https://cineotaku0.web.app",
+    "technologies": [
+      {
+        "name": "MongoDB"
+      },
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "React.js"
+      },
+      {
+        "name": "Daisyui"
+      },
+      {
+        "name": "Axios"
+      },
+      {
+        "name": "React icons"
+      },
+
+      {
+        "name": "Express"
+      }
+    ],
+    "features": [
+      {
+        "name": "Private Mode",
+        "description": "Login or Register is required to access Details Page, Profile Page, and Dashboard Page.",
+        "status": "development"
+      },
+      {
+        "name": "Anime Exploration",
+        "description": "Browse a vast collection of anime titles with detailed information like genres, ratings, studios, and more.",
+        "status": "complete"
+      },
+      {
+        "name": "Search Functionality",
+        "description": "Quickly find anime by title, genre, or related metadata.",
+        "status": "development"
+      },
+      {
+        "name": "User Watch list",
+        "description": "Add and manage your personal anime watch list for easy tracking.",
+        "status": "development"
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Fully optimized for both desktop and mobile devices for smooth experience.",
+        "status": "complete"
+      },
+      {
+        "name": "Dark Mode",
+        "description": "Switch between light and dark themes for a comfortable viewing experience.",
+        "status": "development"
+      },
+      {
+        "name": "Authentication",
+        "description": "Users can join the CineOtaku family by registering or logging in.",
+        "status": "complete"
+      },
+      {
+        "name": "Authentication via Popup",
+        "description": "Users can authenticate using Google or Twitter through popup-based OAuth.",
+        "status": "complete"
+      }
+    ],
+    "description": "CineOtaku is a web application designed for anime enthusiasts to explore, track, and manage their favorite anime series and movies. It offers a user-friendly interface to browse anime content, view detailed information, and maintain personalized watchlists.",
+
+    "projectTime": {
+      "start": "2024-11-05",
+      "end": "2025-05-07",
+      "duration": "6 month(s) 3 days"
+    }
+  },
+  {
+    "name": "Linea",
+    "type": "Solo",
+    "status": "Working",
+    "picture": "/src/assets/projectResource/linea_h.png",
+    "logo": "/src/assets/projectResource/linea.png",
+    "repo": {
+      "parent": "https://github.com/dev-sajjadhosan/linea",
+      "client": "/",
+      "server": "/"
+    },
+    "live": "https://linea0.vercel.app",
+    "technologies": [
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "Shadcn.ui"
+      },
+      {
+        "name": "Axios"
+      },
+      {
+        "name": "Lucide icons"
+      },
+      {
+        "name": "Google Fonts Api"
+      }
+    ],
+    "features": [
+      {
+        "name": "Font are organized by categories",
+        "description": "Easily browse and discover fonts based on different styles and categories.",
+        "status": "complete"
+      },
+      {
+        "name": "Magic Search",
+        "description": "More Faster your search with the help of AI.",
+        "status": "complete"
+      },
+      {
+        "name": "Search Functionality",
+        "description": "Quickly find fonts by name",
+        "status": "complete"
+      },
+      {
+        "name": "Apply Box",
+        "description": "add font on your apply box and use it on your project.",
+        "status": "complete"
+      },
+      {
+        "name": "Store Box",
+        "description": "Store your favorite fonts in your store box. Easily access and manage your preferred fonts for future use.",
+        "status": "complete"
+      },
+      {
+        "name": "Theme Toggle",
+        "description": "Switch between light and dark themes for a comfortable viewing experience. Currently working on Light Mode.",
+        "status": "working"
+      },
+
+      {
+        "name": "Playground",
+        "description": "play with your font just like figma but it is on development phase.",
+        "status": "working"
+      },
+      {
+        "name": "Typography Guide Page",
+        "description": "Learn the basics of typography, including font pairing, hierarchy, and best practices.",
+        "status": "working"
+      },
+      {
+        "name": "Font Details Page",
+        "description": "View detailed information about each font, including styles, weights, and usage examples.",
+        "status": "working"
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Fully optimized for both desktop and mobile devices for smooth experience.",
+        "status": "complete"
+      },
+      {
+        "name": "New Features Coming Soon",
+        "description": "Stay tuned for upcoming features and enhancements to improve your font management experience.",
+        "status": "upcoming"
+      }
+    ],
+    "description": "Linea is a web application designed to help users explore, discover, and manage fonts from the Google Fonts library. It provides an intuitive interface for browsing fonts by categories, searching for specific fonts, and organizing favorite fonts into collections for easy access.",
+
+    "projectTime": {
+      "start": "2025-19-08",
+      "end": "2025-30-08",
+      "duration": "12 days"
+    }
+  },
+  {
+    "name": "Markly Studio",
+    "type": "Solo",
+    "status": "Complete",
+    "picture": "/src/assets/projectResource/marklyStudio_h.png",
+    "logo": "/src/assets/projectResource/marklyStudio.png",
+    "repo": {
+      "parent": "https://github.com/dev-sajjadhosan/marklyStudio",
+      "client": "https://github.com/dev-sajjadhosan/marklyStudio/tree/main/client",
+      "server": "https://github.com/dev-sajjadhosan/marklyStudio/tree/main/server"
+    },
+    "live": "https://marklystudio.vercel.app",
+    "technologies": [
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "DaisyUI"
+      },
+      {
+        "name": "notistack"
+      },
+      {
+        "name": "ottie-react"
+      },
+
+      {
+        "name": "react-simple-typewriter"
+      },
+      {
+        "name": "react-split"
+      },
+      {
+        "name": "react-markdown-preview"
+      },
+
+      {
+        "name": "Express"
+      },
+      {
+        "name": "React icons"
+      }
+    ],
+    "features": [
+      {
+        "name": "Live Markdown Preview",
+        "description": "Real-time preview of Markdown syntax as you type.",
+        "status": "complete"
+      },
+      {
+        "name": "Clean, Minimal UI",
+        "description": "A distraction-free interface for focused writing.",
+        "status": "complete"
+      },
+      {
+        "name": "AI-assisted Markdown Generation:",
+        "description": "Generate Markdown content using AI prompts.",
+        "status": "complete"
+      },
+      {
+        "name": "Import from GitHub",
+        "description": "Easily import existing README.md files from your GitHub repositories for editing.",
+        "status": "working"
+      },
+      {
+        "name": "Export Options",
+        "description": "Export your Markdown files in various formats including .md, .pdf, and .html.",
+        "status": "working"
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Optimized for both desktop and mobile devices.",
+        "status": "complete"
+      },
+      {
+        "name": "Theme Toggle",
+        "description": "Switch between light and dark themes for a comfortable viewing experience.",
+        "status": "complete"
+      },
+      {
+        "name": "Auto-Save",
+        "description": "Your work is automatically saved to prevent data loss.",
+        "status": "complete"
+      },
+
+      {
+        "name": "New Features Coming Soon",
+        "description": "Stay tuned for upcoming features and enhancements to improve your font management experience.",
+        "status": "upcoming"
+      }
+    ],
+    "description": "Markly is a next-generation Markdown and README.md editor, previewer, and generator designed to streamline your documentation workflows. Create from scratch, edit existing files, or import directly from your GitHub repository. Our built-in AI assistant helps you generate clean, professional Markdown files instantly.",
+
+    "projectTime": {
+      "start": "2025-14-06",
+      "end": "2025-25-06",
+      "duration": "12 days"
+    }
+  },
+  {
+    "name": "Bismillah",
+    "type": "Solo",
+    "status": "Complete",
+    "picture": "/src/assets/projectResource/bismillah.png",
+    "logo": "",
+    "repo": {
+      "parent": "https://github.com/dev-sajjadhosan/bismillah",
+      "client": "/",
+      "server": "/"
+    },
+    "live": "https://bismillah0.vercel.app",
+    "technologies": [
+      {
+        "name": "Tailwind CSS"
+      },
+      {
+        "name": "React"
+      },
+      {
+        "name": "DaisyUI"
+      },
+      {
+        "name": "notistack"
+      },
+      {
+        "name": "ottie-react"
+      },
+
+      {
+        "name": "react-simple-typewriter"
+      },
+      {
+        "name": "react-split"
+      },
+      {
+        "name": "react-markdown-preview"
+      },
+
+      {
+        "name": "Express"
+      },
+      {
+        "name": "React icons"
+      }
+    ],
+    "features": [
+      {
+        "name": "save your favorite names",
+        "description": "save your favorite names in your favorite list.",
+        "status": "complete"
+      },
+      {
+        "name": "Clean, Minimal UI",
+        "description": "A distraction-free interface for focused writing.",
+        "status": "complete"
+      },
+      {
+        "name": "AI-Reviews with name",
+        "description": "Show details about the name with the help of AI.",
+        "status": "upcoming"
+      },
+      {
+        "name": "Name with Audio",
+        "description": "Listen to the correct pronunciation of each name.",
+        "status": "upcoming"
+      },
+      {
+        "name": "Notification Reminder",
+        "description": "Get daily reminders to reflect on a new name each day.",
+        "status": "upcoming"
+      },
+      {
+        "name": "Responsive Design",
+        "description": "Optimized for both desktop and mobile devices.",
+        "status": "complete"
+      },
+      {
+        "name": "Theme Toggle",
+        "description": "Switch between light and dark themes for a comfortable viewing experience.",
+        "status": "upcoming"
+      },
+
+      {
+        "name": "New Features Coming Soon",
+        "description": "Stay tuned for upcoming features and enhancements to improve your font management experience.",
+        "status": "upcoming"
+      }
+    ],
+    "description": "Bismillah is a modern Islamic web app designed to help you explore, memorize, and reflect on the 99 Beautiful Names of Allah ﷻ. Each name comes with meanings, benefits, and Qur'anic references, presented in a clean, minimal, and spiritually uplifting interface.✨ Whether you're seeking knowledge, comfort, or a closer connection to your Creator — Bismillah offers a guided, peaceful experience rooted in divine wisdom. ",
+
+    "projectTime": {
+      "start": "2025-07-08",
+      "end": "2025-10-08",
+      "duration": "03 days"
+    }
+  }
+]

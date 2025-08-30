@@ -6,7 +6,8 @@ import {
   TbPhone,
   TbTemplate,
   TbUser,
-  TbUserCode,
+  // TbUserCode,
+  TbUserStar,
 } from 'react-icons/tb'
 import { VscTools } from 'react-icons/vsc'
 import { Link, useLocation } from 'react-router-dom'
@@ -115,6 +116,15 @@ const Header = () => {
           </motion.button>
         </Link>
         <motion.button
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+          className="btn btn-sm btn-primary btn-soft px-3"
+        >
+          <TbUserStar size={17} />
+          Hire ME
+        </motion.button>
+        {/* <motion.button
           className="btn btn-sm btn-primary btn-soft flex items-center gap-1"
           onClick={() =>
             (
@@ -124,7 +134,7 @@ const Header = () => {
         >
           <TbUserCode size={17} />
           Collaborate
-        </motion.button>
+        </motion.button> */}
       </motion.div>
 
       <motion.div
@@ -139,8 +149,16 @@ const Header = () => {
             Contact
           </motion.button>
         </Link>
-
         <motion.button
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.3, duration: 0.7 }}
+          className="btn btn-sm btn-primary btn-soft px-3"
+        >
+          <TbUserStar size={17} />
+          Hire ME
+        </motion.button>
+        {/* <motion.button
           className="btn btn-sm btn-primary btn-soft flex items-center gap-1"
           onClick={() =>
             (
@@ -150,7 +168,7 @@ const Header = () => {
         >
           <TbUserCode size={17} />
           Collaborate
-        </motion.button>
+        </motion.button> */}
       </motion.div>
     </motion.header>
   )

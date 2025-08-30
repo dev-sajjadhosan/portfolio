@@ -12,6 +12,8 @@ import { motion } from 'motion/react'
 import HelmetTitle from '../../components/shared/HelmeTitle'
 
 const AboutDev = () => {
+ 
+
   return (
     <>
       <HelmetTitle title="About - Portfolio" />
@@ -44,7 +46,7 @@ const AboutDev = () => {
                 transition={{ delay: 0.5, duration: 0.7 }}
                 src={dev}
                 width={250}
-                alt=""
+                alt="Mohammad Sajjad Hosan"
                 className="avatar"
               />
             </div>

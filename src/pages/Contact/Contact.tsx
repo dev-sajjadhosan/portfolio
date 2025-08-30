@@ -1,13 +1,21 @@
 import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md'
 import Socials from '../../components/shared/Socials'
 import BackBtn from '../../components/shared/BackBtn'
-import { TbQrcode, TbScanEye, TbUserStar } from 'react-icons/tb'
+import { TbMailCheck, TbQrcode, TbScanEye, TbUserStar } from 'react-icons/tb'
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { useForm } from 'react-hook-form'
 import HelmetTitle from '../../components/shared/HelmeTitle'
+import useAxios from '../../hooks/useAxios'
+import type { alertDoc } from '../../../types'
 
 const ContactPage = () => {
+  const { axiosUrl } = useAxios()
+  const [loading, setLoading] = useState(false)
+  const [alert, setAlert] = useState<alertDoc>({
+    success: false,
+    message: '',
+  })
   const {
     register,
     handleSubmit,
@@ -25,7 +33,7 @@ const ContactPage = () => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
-  const handleFormSubmit = () => {
+  const handleFormSubmit = async () => {
     const data = {
       name: form.name,
       email: form.email,
@@ -33,7 +41,20 @@ const ContactPage = () => {
     }
     setForm(data)
 
-    console.log('Form submitted:', data)
+    setLoading(true)
+    const res = await axiosUrl.post('/contact', data, {
+      headers: {
+        'x-private-key': import.meta.env.VITE_PRIVATE,
+      },
+    })
+    if (res?.data?.success) {
+      setLoading(false)
+      form.name = ''
+      form.email = ''
+      form.message = ''
+    }
+    setAlert(res?.data)
+
     // You can add further logic here, such as sending the data to a server
   }
 
@@ -238,71 +259,88 @@ const ContactPage = () => {
             </div>
           )}
 
+          {alert.success ? (
+            <div className="card items-center justify-center p-11 bg-base-300 gap-1">
+              <TbMailCheck size={45} className="text-info" />
+              <h3 className="text-2xl">Thank You!</h3>
+              <p className="text-md font-light">
+                {alert?.message || 'nothing is here'}
+              </p>
+            </div>
+          ) : (
+            <motion.form
+              initial={{ opacity: 0, y: -50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1, duration: 0.7 }}
+              className="space-y-6"
+              onSubmit={handleSubmit(handleFormSubmit)}
+            >
+              <motion.h3
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3, duration: 0.7 }}
+                className="text-lg"
+              >
+                Want to say hello!
+              </motion.h3>
+              <motion.input
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.5, duration: 0.7 }}
+                type="text"
+                value={form.name}
+                {...register('name', { required: true })}
+                onChange={handleChange}
+                className="w-full border-0 focus:border-b border-gray-400 outline-0 py-2 px-3 text-sm"
+                placeholder="Your name"
+                required
+              />
+
+              <motion.input
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.7, duration: 0.7 }}
+                type="email"
+                {...register('email', { required: true })}
+                value={form.email}
+                onChange={handleChange}
+                className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
+                placeholder="you@example.com"
+                required
+              />
+
+              <motion.textarea
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.9, duration: 0.7 }}
+                className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
+                rows={7}
+                {...register('message', { required: true })}
+                value={form.message}
+                onChange={handleChange}
+                placeholder="Type your message here..."
+                required
+              ></motion.textarea>
+
+              <motion.button
+                initial={{ opacity: 0, y: -50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1, duration: 0.7 }}
+                type="submit"
+                className="btn btn-sm btn-primary btn-soft px-7"
+              >
+                {loading ? (
+                  <>
+                    <span className="loading loading-sm loading-spinner" />
+                    Sending
+                  </>
+                ) : (
+                  <>🚀 Send Message</>
+                )}
+              </motion.button>
+            </motion.form>
+          )}
           {/* Contact Form */}
-          <motion.form
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1, duration: 0.7 }}
-            className="space-y-6"
-            onSubmit={handleSubmit(handleFormSubmit)}
-          >
-            <motion.h3
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.7 }}
-              className="text-lg"
-            >
-              Want to say hello!
-            </motion.h3>
-            <motion.input
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 0.7 }}
-              type="text"
-              value={form.name}
-              {...register('name', { required: true })}
-              onChange={handleChange}
-              className="w-full border-0 focus:border-b border-gray-400 outline-0 py-2 px-3 text-sm"
-              placeholder="Your name"
-              required
-            />
-
-            <motion.input
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.7 }}
-              type="email"
-              {...register('email', { required: true })}
-              value={form.email}
-              onChange={handleChange}
-              className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
-              placeholder="you@example.com"
-              required
-            />
-
-            <motion.textarea
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.7 }}
-              className="w-full border-0 focus:border-b border-gray-400  outline-0 py-2 px-3 text-sm"
-              rows={7}
-              {...register('message', { required: true })}
-              value={form.message}
-              onChange={handleChange}
-              placeholder="Type your message here..."
-              required
-            ></motion.textarea>
-
-            <motion.button
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1, duration: 0.7 }}
-              type="submit"
-              className="btn btn-sm btn-primary btn-soft px-7"
-            >
-              🚀 Send Message
-            </motion.button>
-          </motion.form>
         </div>
       </motion.section>
     </>
