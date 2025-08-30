@@ -3,8 +3,8 @@
     "name": "CineOtaku",
     "type": "Solo",
     "status": "Completed",
-    "picture": "/src/assets/projectResource/cineOtaku_h.png",
-    "logo": "/src/assets/projectResource/cineOtaku.png",
+    "picture": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/cineOtaku_h.png",
+    "logo": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/cineOtaku.png",
     "repo": {
       "parent": "https://github.com/dev-sajjadhosan/CineOtaku",
       "client": "https://github.com/dev-sajjadhosan/CineOtaku/tree/main/frontend",
@@ -89,8 +89,8 @@
     "name": "Linea",
     "type": "Solo",
     "status": "Working",
-    "picture": "/src/assets/projectResource/linea_h.png",
-    "logo": "/src/assets/projectResource/linea.png",
+    "picture": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/linea_h.png",
+    "logo": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/linea.png",
     "repo": {
       "parent": "https://github.com/dev-sajjadhosan/linea",
       "client": "/",
@@ -187,8 +187,8 @@
     "name": "Markly Studio",
     "type": "Solo",
     "status": "Complete",
-    "picture": "/src/assets/projectResource/marklyStudio_h.png",
-    "logo": "/src/assets/projectResource/marklyStudio.png",
+    "picture": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/marklyStudio_h.png",
+    "logo": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/marklyStudio.png",
     "repo": {
       "parent": "https://github.com/dev-sajjadhosan/marklyStudio",
       "client": "https://github.com/dev-sajjadhosan/marklyStudio/tree/main/client",
@@ -289,7 +289,7 @@
     "name": "Bismillah",
     "type": "Solo",
     "status": "Complete",
-    "picture": "/src/assets/projectResource/bismillah.png",
+    "picture": "https://github.com/dev-sajjadhosan/portfolio/blob/main/src/assets/projectResource/bismillah.png",
     "logo": "",
     "repo": {
       "parent": "https://github.com/dev-sajjadhosan/bismillah",
