@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form'
 import HelmetTitle from '../../components/shared/HelmeTitle'
 import useAxios from '../../hooks/useAxios'
 import type { alertDoc } from '../../../types'
+import ResumeView from '../../components/ResumeView/ResumeView'
 
 const ContactPage = () => {
   const { axiosUrl } = useAxios()
@@ -61,6 +62,7 @@ const ContactPage = () => {
   return (
     <>
       <HelmetTitle title="Contact - Portfolio" />
+      <ResumeView />
       <motion.section layout className="min-h-screen p-7 text-primary">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
@@ -70,7 +72,7 @@ const ContactPage = () => {
         >
           <BackBtn />
           <div className="flex items-center gap-2">
-            <motion.button
+            {/* <motion.button
               initial={{ y: -50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.7 }}
@@ -78,7 +80,7 @@ const ContactPage = () => {
             >
               <TbUserStar size={17} />
               Hire ME
-            </motion.button>
+            </motion.button> */}
             <motion.button
               initial={{ opacity: 0, y: -50 }}
               animate={{ opacity: 1, y: 0 }}
