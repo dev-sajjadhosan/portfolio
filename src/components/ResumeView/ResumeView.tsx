@@ -3,7 +3,7 @@ import { TbDownload } from 'react-icons/tb'
 
 const ResumeView = () => {
   const link =
-    'https://docs.google.com/document/d/1E8Wpb1BBAwtDrozpW5xOCNHKXL3WY-jq_fCQzacO_P8/preview?tab=t.0'
+    'https://drive.google.com/file/d/1OFnKMsbrO84bZlyz8J07-5XH4Khe84xg/view?usp=sharing'
   return (
     <>
       <dialog className="modal" id="resume_modal">
@@ -22,7 +22,7 @@ const ResumeView = () => {
               </button>
               <a
                 className="btn btn-sm btn-info"
-                href="/mohammad-sajjad-hosan.pdf"
+                href="/Mohammad_Sajjad_Hosan.pdf"
                 download
               >
                 <TbDownload size={17} />
@@ -37,7 +37,7 @@ const ResumeView = () => {
           </div>
           <div className="mt-7">
             <iframe
-              src={`${link}#toolbar=0&zoom=2.3`}
+              src={`${'/Mohammad_Sajjad_Hosan.pdf'}#toolbar=0`}
               className="w-full h-[30rem] border-0"
               contentEditable={false}
             ></iframe>
